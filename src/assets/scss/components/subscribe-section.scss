@@ -1,0 +1,53 @@
+@import "../main/parameters";
+
+.subscribe-section {
+  padding: 0 0 46px;
+  &__header {
+    text-align: center;
+    position: relative;
+    margin: 0 0 61px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      transform: translate(-50%,0);
+      height: 1px;
+      background: rgba(8,5,8,0.2);
+    }
+  }
+  &__title {
+    background: #fff;
+    padding: 0 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+  }
+  &__form {
+    display: flex;
+  }
+  &__form .formgroup {
+    position: relative;
+    flex: 1;
+  }
+  &__form .icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 14px;
+    height: 16px;
+    fill: #ccc;
+  }
+  &__form input {
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    padding: 0 15px 0 45px;
+  }
+  &__form {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}

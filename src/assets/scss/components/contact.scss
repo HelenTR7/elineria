@@ -1,0 +1,60 @@
+@import "../main/parameters";
+
+.contact {
+  padding-top: 53px;
+  &__title {
+    margin: 0 0 59px;
+  }
+  &__main-row {
+    align-items: center;
+    margin-bottom: 75px;
+  }
+  &__img-wrap {}
+  &__img {
+    max-width: 100%;
+  }
+  &__main {
+    padding-left: 30px;
+    table {}
+    tr {}
+    td {
+      padding: 13px 5px 13px 0;
+      color: #777;
+      a {
+        color: #777;
+        text-decoration: underline;
+        text-decoration-color: inherit;
+        &:hover {
+          color: $c-primary;
+        }
+      }
+    }
+    td:first-child {
+      color: $c-text;
+    }
+  }
+  &__form {
+    margin: 0 0 120px;
+  }
+  &__form-title {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 17px;
+  }
+  &__form-body {
+    background: #F5F5F5;
+    padding: 30px;
+  }
+  &__form-btn {
+    .btn {
+      flex-direction: row-reverse;
+      margin-left: auto;
+      min-width: 170px;
+    }
+    .icon {
+      margin: 0 0 0 5px;
+    }
+  }
+}

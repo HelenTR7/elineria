@@ -1,0 +1,52 @@
+@import "../main/parameters";
+
+.cat-section {
+  padding: 0 0 79px;
+  &__header {
+    margin: 0 0 22px;
+  }
+  &__slider {
+    position: relative;
+  }
+  &__item {
+    &:hover {
+      .cat-section {
+        &__item-img-wrap::after {
+          background: rgba(255,255,255,0.3);
+        }
+        &__item-img {
+          transform: scale(1.05);
+        }
+        &__item-title {
+          color: $c-primary;
+        }
+      }
+    }
+  }
+  &__item-img-wrap {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.0);
+      transition: background-color ease 0.3s;
+    }
+  }
+  &__item-img {
+    transition: transform ease 0.3s;
+    display: block;
+  }
+  &__item-title {
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+    transition: color ease 0.3s;
+  }
+}

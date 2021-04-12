@@ -1,0 +1,14 @@
+// Помощники
+@import 'mixins/mixins';
+@import 'main/stylesheet';
+@import 'main/parameters';
+
+//Общее
+@import 'main/reset';
+@import 'main/common';
+@import 'main/grid';
+
+@import 'vendors/swiper';
+
+//Компоненты -> добавляются автоматически
+//@import "components/*";

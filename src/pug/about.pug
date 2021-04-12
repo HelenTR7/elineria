@@ -1,0 +1,78 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'About brend'
+    - var pageBodyClass = ''
+    - var pageHeaderClass = ''
+
+block content
+
+    +b.about.container.container--sm
+         +e('h1').__title.h1.h1--big About Brend
+         +e.__main-row.row
+             .col-md-6
+                 +lazy-img({
+                     img: './assets/imgs/about.jpg',
+                     placeholder: pixel,
+                     img_mod: 'about__img',
+                     wrap_mod: 'about__img-wrap',
+                     link: false,
+                     aria_label: false,
+                 })
+             .col-md-6
+                 +e.__main
+                     p <span>ELINERIA</span> - это путь к себе. Это самый благодарный путь на свете.
+                     p <span>ELINERIA</span> - это женский вектор к своей уникальной самоценности, взращиваемый с детства.
+                     p <span>ELINERIA</span> – это баланс линий, форм и дизайна.
+                     p <span>ELINERIA</span> - это путь любви.
+                     p А, как известно, настоящей любви неподвластно влияние трендов и стереотипов. Любовь проявляет нас в этом мире. Она глубокая, безусловная и креативная, как и любовь дизайнера бренда <span>ELINERIA  - Ирины Эйгерис</span>, с которой она создала бренд для Вас и хочет помочь проложить путь от самооценки к самоценности
+         blockquote Цветок с пятью лепестками в логотипе бренда символизирует человека  и  является  пентаграммой Венеры. Венера - планета романтики,  женственности, чувственности,  эстетического вкуса и  изысканного стиля.  Это ценности бренда.
+         +e.__main-row.row
+             .col-md-6
+                 +lazy-img({
+                     img: './assets/imgs/about2.jpg',
+                     placeholder: pixel,
+                     img_mod: 'about__img',
+                     wrap_mod: 'about__img-wrap',
+                     link: false,
+                     aria_label: false,
+                 })
+             .col-md-6
+                 +e.__main
+                     ul
+                         li
+                             b E
+                             span with elegant
+                         li
+                             b L
+                             span luxury of smile
+                         li
+                             b I
+                             span individualty
+                         li
+                             b N
+                             span narrator about you thrurh your garment
+                         li
+                             b E
+                             span enthusiasm in any life circumstances
+                         li
+                             b R
+                             span reasonalble (call for meaningful clothing choices)
+                         li
+                             b I
+                             span idea and creativity
+                         li
+                             b A
+                             span accomplished in your the amazing, magical way
+         +e.__main
+             p Больше всего люди боятся быть самими собой. Миссия бренда  -  бережно "распаковать" природную женственность, с элегантной лёгкостью преобразовать отношение к себе самой как удивительной, уникальной части нашего прекрасного мира.
+             p Важно с детства формировать хороший вкус  у девочки. Это придаст ей веру в себя и поможет подобрать ключ ко многим дверям в жизни.
+             p Современные подростки такие же эмоциональные и чувствительные. Они хотят быть любимыми, стремятся найти свое место в жизни, подчеркнуть свою индивидуальность. Они сильно зависят от мнения окружающих людей. Важно помочь им найти опору в себе.
+             p Ваша внутренняя опора – это Ваше собственное мнение о себе. Разучите своих детей, разучитесь сами разрешать другим определять, кто Вы и на что Вы способны.
+         blockquote Спросите себя, какой я хочу быть? Хочу я быть чувственной, счастливой, женственной? Что я могу сделать для этого?
+         +e.__last
+            p Благодарим за Ваше доверие!
+            p Для нас большая честь стать верным другом на вашем пути к самой себе.
+            p С любовью,  <span>Elineria</span>
+
+

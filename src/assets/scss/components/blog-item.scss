@@ -1,0 +1,50 @@
+@import "../main/parameters";
+
+.blog-item {
+  &__img-wrap {
+    display: block;
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+  &__img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 5px;
+  }
+  &__title-sm {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 9px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 32px;
+  }
+  &__btn {}
+}

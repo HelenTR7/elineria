@@ -1,0 +1,45 @@
+@import "../main/parameters";
+
+.swiper-button-disabled {
+  &::after {
+    border-color: rgba(136, 117, 104, 0.5);
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  top: -35px;
+  left: auto;
+  background: rgba(0,0,0,0.0);
+  position: absolute;
+  transition: all ease 0.3s;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    height: 10px;
+    width: 10px;
+    border-top: 1px solid $c-text;
+    border-right: 1px solid $c-text;
+    transition: all ease 0.3s;
+  }
+  &:hover {
+    transition: all ease 0.3s;
+    &::after {
+      border-color: $c-primary;
+      transition: all ease 0.3s;
+    }
+  }
+}
+.swiper-button-prev {
+  right: 30px;
+}
+.swiper-button-next {
+  right: -10px;
+}
+.swiper-button-prev::after {
+  transform: rotate(-135deg) skew(10deg, 10deg);
+}
+.swiper-button-next::after {
+  transform: rotate(45deg) skew(10deg, 10deg);
+}
+

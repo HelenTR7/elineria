@@ -1,0 +1,261 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'Catalog.Kids'
+    - var pageBodyClass = ''
+    - var pageHeaderClass = ''
+
+block content
+    .catalog.container
+        h1.h1.page-title Kids
+        .row
+            .col-md-2
+                +b('nav').catalog-nav
+                    +e('ul').__list
+                        li
+                            a(href="#") Dress
+                        li
+                            a(href="#") Skirts
+                        li
+                            a(href="#") Pants
+                        li
+                            a(href="#") Blouses
+                        li
+                            a(href="#") Costumes
+                        li
+                            a(href="#") Jackets
+                        li
+                            a(href="#") Accessories
+                        li
+                            a(href="#") Limited
+            .col-md-10
+                +b.catalog-filters
+                    +e.__item
+                        select.formstyler
+                            option Size
+                            option Size 2
+                            option Size 3
+                    +e.__item
+                        select.formstyler
+                            option Color
+                            option Color 2
+                            option Color 3
+                    +e.__item
+                        select.formstyler
+                            option Material
+                            option Material 2
+                            option Material 3
+                    +e.__item
+                        select.formstyler
+                            option Age
+                            option Age 2
+                            option Age 3
+                include components/product-item
+                .row
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product18.jpg',
+                            status: 'New',
+                            title: 'Mini dress',
+                            price: '100€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#E2DBD5'],
+                            sizes: [
+                                {name: 'xs', status: ''},
+                                {name: 's', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product19.jpg',
+                            status: 'New',
+                            title: 'Trousers with patch pockets',
+                            price: '800€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#E5E5E5','#B7A085'],
+                            sizes: [
+                                {name: 's', status: ''},
+                                {name: 'm', status: ''},
+                                {name: 'l', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product20.jpg',
+                            status: 'New',
+                            title: 'Tie Waist Midi Dress',
+                            price: '1 300€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#A3ADAD','#746B62','#B5B4B5'],
+                            sizes: [
+                                {name: 's', status: ''},
+                                {name: 'm', status: ''},
+                                {name: 'l', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product21.jpg',
+                            status: 'New',
+                            title: 'Midi dress with button closure',
+                            price: '1 200€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#E2DBD5'],
+                            sizes: [
+                                {name: 'xs', status: ''},
+                                {name: 's', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product22.jpg',
+                            status: 'New',
+                            title: 'Trousers with patch pockets',
+                            price: '800€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#E5E5E5', '#B7A085'],
+                            sizes: [
+                                {name: 's', status: ''},
+                                {name: 'm', status: ''},
+                                {name: 'l', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product23.jpg',
+                            status: 'New',
+                            title: 'Tie Waist Midi Dress',
+                            price: '1 300€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#A3ADAD', '#746B62', '#B5B4B5'],
+                            sizes: [
+                                {name: 's', status: ''},
+                                {name: 'm', status: ''},
+                                {name: 'l', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product24.jpg',
+                            status: 'New',
+                            title: 'Midi dress with button closure',
+                            price: '1 200€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#E2DBD5'],
+                            sizes: [
+                                {name: 'xs', status: ''},
+                                {name: 's', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product25.jpg',
+                            status: 'New',
+                            title: 'Trousers with patch pockets',
+                            price: '800€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#E5E5E5', '#B7A085'],
+                            sizes: [
+                                {name: 's', status: ''},
+                                {name: 'm', status: ''},
+                                {name: 'l', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                    .col-md-4
+                        +product-item({
+                            mod_class: 'product-item--catalog',
+                            img: './assets/imgs/product26.jpg',
+                            status: 'New',
+                            title: 'Tie Waist Midi Dress',
+                            price: '1 300€',
+                            old_price: '',
+                            in_favourite: '',
+                            not_in_stock: '',
+                            in_stock: '',
+                            colors: ['#A3ADAD', '#746B62', '#B5B4B5'],
+                            sizes: [
+                                {name: 's', status: ''},
+                                {name: 'm', status: ''},
+                                {name: 'l', status: ''},
+                            ],
+                            bottom_sizes: true,
+                        })
+                +b.pagination
+                    +e.__inner
+                        +e('a').__arr.prev(href="#")
+                            +icon('i-pag-arr')
+                            span prev
+                        +e('a').__link(href="#") 2
+                        +e('a').__link(href="#") 3
+                        +e('span').__current 4
+                        +e('a').__link(href="#") 5
+                        +e('a').__link(href="#") 6
+                        +e('a').__arr.next(href="#")
+                            span next
+                            +icon('i-pag-arr')
+                +b.catalog-banners
+                    .row
+                        .col-md-6
+                            +lazy-img({
+                                img: './assets/imgs/cat-banner1.jpg',
+                                placeholder: pixel,
+                                img_mod: 'catalog-banners__img',
+                                wrap_mod: 'catalog-banners__img-wrap',
+                                link: true,
+                                aria_label: false,
+                            })
+                                +e('span').__text Shop teens
+                        .col-md-6
+                            +lazy-img({
+                                img: './assets/imgs/cat-banner3.jpg',
+                                placeholder: pixel,
+                                img_mod: 'catalog-banners__img',
+                                wrap_mod: 'catalog-banners__img-wrap',
+                                link: true,
+                                aria_label: false,
+                            })
+                                +e('span').__text Shop women
+
+
+
+

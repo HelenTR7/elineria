@@ -1,0 +1,13 @@
+@import "../main/parameters";
+
+.blog-section {
+  padding: 0 0 120px;
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 0 31px;
+  }
+  &__title {}
+  &__link {}
+}

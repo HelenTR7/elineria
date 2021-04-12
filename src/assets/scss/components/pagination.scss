@@ -1,0 +1,57 @@
+@import "../main/parameters";
+
+.pagination {
+  text-align: center;
+  position: relative;
+  margin: 0 0 80px;
+  &::before {
+    content: '';
+    height: 1px;
+    background: rgba(8, 5, 8, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &__inner {
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__arr {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 0 70px;
+    .icon {
+      width: 22px;
+      height: 8px;
+      fill: $c-text;
+      transition: fill ease 0.4s;
+    }
+    span {
+      padding: 0 10px;
+    }
+    &.prev {}
+    &.next .icon {
+      transform: scaleX(-1);
+    }
+    &:hover {
+      .icon {
+        fill: $c-primary;
+      }
+    }
+  }
+  &__link {
+    color: rgba(8, 5, 8, 0.5);
+    &:hover {
+      color: $c-text;
+    }
+  }
+  &__link,
+  &__current {
+    padding: 0 8px;
+  }
+}

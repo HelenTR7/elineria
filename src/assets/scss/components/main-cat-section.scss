@@ -1,0 +1,52 @@
+@import "../main/parameters";
+
+.main-cat-section {
+  padding: 0 0 98px;
+  &__item {
+    display: block;
+  }
+  &__item:hover {
+    .main-cat-section {
+      &__item-title {
+        color: $c-primary;
+      }
+      &__item-img {
+        transform: scale(1.05);
+      }
+      &__item-img::after {
+        background: rgba(255,255,255,0.3);
+      }
+    }
+  }
+  &__item-title {
+    display: block;
+    margin: 0 0 20px;
+  }
+  &__item-img-wr {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 143%;
+  }
+  &__item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform ease 0.3s;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.0);
+      transition: background-color ease 0.3s;
+    }
+  }
+}

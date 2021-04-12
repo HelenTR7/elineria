@@ -1,0 +1,26 @@
++b('header').header
+    .container
+        +e.__inner
+            +b('a').burger(href='javascript:;')
+                +e.__line
+                +e.__line
+                +e.__line
+            +b('nav').header-cat
+                +e('ul').__list
+                    +e('li').__item
+                        +e('a').__link(href="#") Women
+                    +e('li').__item
+                        +e('a').__link(href="#") Teens
+                    +e('li').__item
+                        +e('a').__link(href="#") Kids
+            +e('a').__logo(href="index.html")
+                img(src="./assets/imgs/logo.png" alt="logo")
+            +e.__actions
+                +e('a').__action.search(href="javascript:;")
+                    +icon('i-search')
+                +e('a').__action.favourite(href="javascript:;")
+                    +icon('i-like')
+                +e('a').__action.cart(href="javascript:;")
+                    +icon('i-bag')
+                +e('a').__action.lang(href="javascript:;")
+                    +icon('i-lang')

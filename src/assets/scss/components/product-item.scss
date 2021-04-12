@@ -1,0 +1,217 @@
+@import "../main/parameters";
+
+.product-item {
+  &__top {
+    position: relative;
+    overflow: hidden;
+  }
+  &__top .to-favourite {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &__top .to-favourite .icon {
+    width: 28px;
+    height: 25px;
+    fill: $c-text;
+    transition: fill ease 0.3s;
+  }
+  &__top .to-favourite:hover .icon {
+    fill: $c-primary;
+  }
+  &__img-wrap {
+    display: block;
+  }
+  &__img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px 15px;
+    transform: translate(0,100%);
+    transition: transform ease 0.4s;
+  }
+  &__action-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -5px 15px;
+
+    .size {
+      flex: 0 0 calc(25% - 10px);
+      max-width: calc(25% - 10px);
+      font-size: 18px;
+      color: #000;
+      text-transform: uppercase;
+      line-height: 23px;
+      height: 25px;
+      padding: 0 5px;
+      text-align: center;
+      border: 1px solid;
+      position: relative;
+      cursor: pointer;
+      margin: 0 5px 15px;
+      transition: color ease 0.3s, border-color ease 0.3s;
+      &:hover {
+        color: $c-primary;
+      }
+    }
+    .size--ends::after {
+      content: 'Ends';
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      right: 0;
+      font-size: 11px;
+      line-height: 11px;
+      height: 11px;
+      text-align: center;
+      color: #B5B4B5;
+      text-transform: none;
+    }
+    .size--end {
+      color: #C4C4C4;
+      cursor: not-allowed;
+      &:hover {
+        color: #C4C4C4;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url("../imgs/i-line.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  &__no-stock {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 15px;
+  }
+  &__action-to-card {
+    margin: 0 0 15px;
+  }
+  &__action-from-favourite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 15px;
+    .icon {
+      height: 15px;
+      width: 15px;
+      fill: $c-text;
+      margin-right: 10px;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    padding: 19px 20px;
+  }
+  &__status {
+    min-height: 23px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: rgba(8, 5, 8, 0.3);
+    margin: 0 0 5px;
+  }
+  &__title {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 5px;
+  }
+  &__prices {
+    margin: 0 0 17px;
+  }
+  &__prices .current {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &__prices .old {
+    text-decoration: line-through;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(8, 5, 8, 0.3);
+  }
+  &__colors {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px;
+    .color {
+      background: #FFFFFF;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #E5E5E5;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 0 5px;
+      border-radius: 50%;
+    }
+  }
+  &__sizes {
+    display: flex;
+    justify-content: center;
+    .size {
+      color: $c-text;
+      text-transform: uppercase;
+      margin: 0 2px;
+    }
+    .size--end {
+      color: #C4C4C4;
+      cursor: not-allowed;
+    }
+  }
+
+  &:hover {
+    .product-item {
+      &__actions {
+        transform: translate(0,0);
+      }
+    }
+  }
+}
+
+
+.product-item--sale {
+  .product-item {
+    &__prices .current {
+      color: #9A2A28;
+    }
+  }
+}
+
+.product-item--in-stock {}
+.product-item--not-in-stock {}
+
+.product-item--catalog {
+  margin: 0 0 33px;
+  .product-item {
+    &__top .to-favourite .icon {
+      width: 34px;
+      height: 30px;
+    }
+    &__info {
+      padding: 28px 20px;
+    }
+  }
+}

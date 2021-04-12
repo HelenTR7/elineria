@@ -1,0 +1,87 @@
+@import "../main/parameters";
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 12px;
+  height: 50px;
+  line-height: 50px;
+  color: $c-text;
+  background: #fff;
+  border: 0;
+  transition: background .3s, color .3s;
+  min-width: 195px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+    background: $c-primary;
+  }
+}
+
+.btn--dark {
+  background: $c-text;
+  color: #fff;
+  .icon {
+    fill: #fff;
+  }
+  &:hover,
+  &:focus {}
+}
+
+.btn--light {
+  background: #fff;
+  color: $c-text;
+  &:hover,
+  &:focus {}
+}
+
+.btn--primary {
+  color: #fff;
+  background: $c-primary;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: #E34D47;
+    border-color: #E34D47;
+  }
+}
+
+.btn--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+  }
+}
+
+.btn--bordered {
+  color: $c-primary;
+  border-color: $c-primary;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-color: $c-primary;
+    background-color: $c-primary;
+  }
+}
+
+.link {
+  font-size: 20px;
+  color: $c-add;
+  border-bottom: 1px solid;
+  &:hover,
+  &:focus {}
+}

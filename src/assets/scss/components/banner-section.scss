@@ -1,0 +1,37 @@
+@import "../main/parameters";
+
+.banner-section {
+  padding: 0 0 98px;
+  &__img-wrap {
+    display: block;
+    position: relative;
+  }
+  &__img {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+  }
+  &__content {
+    position: absolute;
+    z-index: 2;
+    max-width: 475px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 100px 10px 0;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 30px;
+  }
+  &__btn {}
+}

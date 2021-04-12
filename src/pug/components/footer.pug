@@ -1,0 +1,81 @@
++b.subscribe-section
+    .container
+        +e.__header
+            +e('span').__title.h2 Subscribe TO OUR NEWSLETTER
+        +e('form').__form
+            .formgroup
+                +icon('i-mail')
+                input(type="email" placeholder="Enter your e-mail address here")
+            button.btn.btn--dark Subscribe
++b('footer').footer
+    +e.__top
+        .container
+            .row
+                +e.__col
+                    +e.__title Info
+                    +e('nav').__nav
+                        +e('ul').__list
+                            li
+                                a(href="#") About brend
+                            li
+                                a(href="#") Versand
+                            li
+                                a(href="#") Zahlung
+                +e.__col
+                    +e.__title Support
+                    +e('nav').__nav
+                        +e('ul').__list
+                            li
+                                a(href="#") Wiederruf
+                            li
+                                a(href="#") Umtausch/Retoure
+                +e.__col
+                    +e.__title More
+                    +e('nav').__nav
+                        +e('ul').__list
+                            li
+                                a(href="#") Sale
+                            li
+                                a(href="#") AGB
+                +e.__col
+                    +e.__title Profile
+                    +e('nav').__nav
+                        +e('ul').__list
+                            li
+                                a(href="#") Personal account
+                            li
+                                a(href="#") Order history
+                            li
+                                a(href="#") Favorite
+                +e.__col
+                    +e.__title Contact Us
+                    +e('nav').__nav.footer__nav--contacts
+                        +e('ul').__list
+                            li
+                                a(href="tel:+4900000000").tel
+                                    +icon('i-phone')
+                                    span +49 00000000
+                            li
+                                a(href="mailto:info@elineria.com")
+                                    +icon('i-mail')
+                                    span info@elineria.com
+                            li
+                                a(href="#")
+                                    +icon('i-instagram')
+                                    span elineria
+
+
+
+
+    +e.__bottom
+        .container
+            +lazy-img({
+                img: './assets/imgs/logo-footer.png',
+                placeholder: pixel,
+                img_mod: 'footer__logo',
+                wrap_mod: 'footer__logo-wrap',
+                link: true,
+                aria_label: false,
+            })
+            +e.__copy © Elineria S.r.l. P.IVA IT04636090963
+

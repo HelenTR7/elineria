@@ -1,0 +1,42 @@
+@import "../main/parameters";
+
+.breadcrumbs {
+  padding: 37px 0 34px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  li {
+    letter-spacing: 0.05em;
+    position: relative;
+    color: $c-text;
+    &:not(:last-child) {
+      margin: 0 16px 0 0;
+      padding: 0 16px 0 0;
+    }
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0,-50%);
+      background: url("../imgs/i-br-arr.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 8px;
+      width: 5px;
+    }
+  }
+  span {
+    color: inherit;
+  }
+  a {
+    color: #777777;
+    &:hover {
+      color: $c-primary;
+    }
+  }
+}

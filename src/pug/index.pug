@@ -1,0 +1,573 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'Homepage'
+    - var pageBodyClass = 'homepage'
+    - var pageHeaderClass = ''
+
+block content
+    +b.first-section(style="background-image:url('./assets/imgs/banner.jpg'); color: #fff;")
+        .container
+            +e.__inner
+                +e.__title-sm New arrivals
+                +e('h1').__title Spring/Summer 2021
+                +e.__btn
+                    a(href="#").btn Shop now
+    +b.main-cat-section
+        .container
+            .row
+                .col-md-4
+                    +e('a').__item(href="#")
+                        +e.__item-title.h2 Women
+                        +lazy-bg({
+                            img: './assets/imgs/cat-women.jpg',
+                            img_mod: 'main-cat-section__item-img',
+                            wrap_mod: 'main-cat-section__item-img-wr',
+                            link: false,
+                            aria_label: false,
+                        })
+                .col-md-4
+                    +e('a').__item(href="#")
+                        +e.__item-title.h2 Teens
+                        +lazy-bg({
+                            img: './assets/imgs/cat-teens.jpg',
+                            img_mod: 'main-cat-section__item-img',
+                            wrap_mod: 'main-cat-section__item-img-wr',
+                            link: false,
+                            aria_label: false,
+                        })
+                .col-md-4
+                    +e('a').__item(href="#")
+                        +e.__item-title.h2 Kids
+                        +lazy-bg({
+                            img: './assets/imgs/cat-kids.jpg',
+                            img_mod: 'main-cat-section__item-img',
+                            wrap_mod: 'main-cat-section__item-img-wr',
+                            link: false,
+                            aria_label: false,
+                        })
+    include components/product-item
+    +b.products-section
+        .container
+            +e.__header.h2 New arrival
+            +e.__slider.js-products-slider
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product1.jpg',
+                                status: 'New',
+                                title: 'Elasticated trousers',
+                                price: '1 500€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['rgba(67, 77, 117, 0.4)'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product2.jpg',
+                                status: 'New',
+                                title: 'Midi dress with button closure',
+                                price: '1 200€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E2DBD5'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: 'size--end'},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product3.jpg',
+                                status: 'New',
+                                title: 'Trousers with patch pockets',
+                                price: '800€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E5E5E5', '#B7A085'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: 'size--ends'}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product4.jpg',
+                                status: 'New',
+                                title: 'Tie Waist Midi Dress',
+                                price: '1 300€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#A3ADAD', '#746B62', '#080508'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product1.jpg',
+                                status: 'New',
+                                title: 'Elasticated trousers',
+                                price: '1 500€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['rgba(67, 77, 117, 0.4)'],
+                                sizes: [
+                                    {name:'xs',status:'size--ends'},
+                                    {name:'s',status:'size--end'},
+                                    {name:'m',status:''},
+                                    {name:'l',status:''}
+                                    ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product2.jpg',
+                                status: 'New',
+                                title: 'Midi dress with button closure',
+                                price: '1 200€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E2DBD5'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: 'size--end'},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product3.jpg',
+                                status: 'New',
+                                title: 'Trousers with patch pockets',
+                                price: '800€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E5E5E5','#B7A085'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: 'size--ends'}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product4.jpg',
+                                status: 'New',
+                                title: 'Tie Waist Midi Dress',
+                                price: '1 300€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#A3ADAD','#746B62','#080508'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+
+                .swiper-button-prev
+                .swiper-button-next
+    +b.banner-section
+        .container
+            +lazy-bg({
+                img: './assets/imgs/banner2.jpg',
+                img_mod: 'banner-section__img',
+                wrap_mod: 'banner-section__img-wrap',
+                link: false,
+                aria_label: false,
+            })
+                +e.__content
+                    +e.__title Explore our new collection for spring/summer 2021
+                    +e.__btn
+                        a(href="#").btn.btn--light Shop now
+    +b.cat-section
+        .container
+            +e.__header.h2 Shop By Category
+            +e.__slider.js-cat-slider
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat1.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Dress
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat2.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Jackets
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat3.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Skirts
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat4.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Pants
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat5.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Acceessories
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat6.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Blouses
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat1.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Dress
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat2.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Jackets
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat3.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Skirts
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat4.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Pants
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat5.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Acceessories
+                        .swiper-slide
+                            +e('a').__item(href="#")
+                                +lazy-img({
+                                    img: './assets/imgs/cat6.jpg',
+                                    placeholder: pixel,
+                                    img_mod: 'cat-section__item-img',
+                                    wrap_mod: 'cat-section__item-img-wrap',
+                                    link: false,
+                                    aria_label: false,
+                                })
+                                +e.__item-title Blouses
+                .swiper-button-prev
+                .swiper-button-next
+    +b.products-section
+        .container
+            +e.__header.h2 Most Popular
+            +e.__slider.js-products-slider
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product5.jpg',
+                                status: 'Limited',
+                                title: 'Elasticated trousers',
+                                price: '1 500€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#000'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: 'product-item--sale',
+                                img: './assets/imgs/product6.jpg',
+                                status: 'SALE',
+                                title: 'Midi dress with button closure',
+                                price: '1 200€',
+                                old_price: '1 800€',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E3CBC0'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: 'size--end'},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product7.jpg',
+                                status: '',
+                                title: 'Trousers with patch pockets',
+                                price: '1 800€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E5E5E5', '#B7A085'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: 'size--ends'}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product8.jpg',
+                                status: 'Limited',
+                                title: 'Tie Waist Midi Dress',
+                                price: '2 300€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#A3ADAD', '#746B62', '#D6CBB6'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product5.jpg',
+                                status: 'Limited',
+                                title: 'Elasticated trousers',
+                                price: '1 500€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#000'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: 'product-item--sale',
+                                img: './assets/imgs/product6.jpg',
+                                status: 'SALE',
+                                title: 'Midi dress with button closure',
+                                price: '1 200€',
+                                old_price: '1 800€',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E3CBC0'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: 'size--end'},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product7.jpg',
+                                status: '',
+                                title: 'Trousers with patch pockets',
+                                price: '1 800€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E5E5E5', '#B7A085'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: 'size--ends'}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product8.jpg',
+                                status: 'Limited',
+                                title: 'Tie Waist Midi Dress',
+                                price: '2 300€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#A3ADAD', '#746B62', '#D6CBB6'],
+                                sizes: [
+                                    {name: 'xs', status: ''},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                .swiper-button-prev
+                .swiper-button-next
+    +b.blog-section
+        .container
+            +e.__header
+                +e.__title.h2 Our blog
+                +e('a').__link.link(href="#") Read More
+            .row
+                .col-md-6
+                    +b.blog-item
+                        +lazy-bg({
+                            img: './assets/imgs/blog1.jpg',
+                            img_mod: 'blog-item__img',
+                            wrap_mod: 'blog-item__img-wrap',
+                            link: true,
+                            aria_label: false,
+                        })
+                            +e.__content
+                                +e.__title-sm NEW ARRIVALS
+                                +e.__title SPRING/SUMMER 2021
+                                +e.__btn
+                                    span.btn read NOW
+                .col-md-6
+                    +b.blog-item
+                        +lazy-bg({
+                            img: './assets/imgs/blog2.jpg',
+                            img_mod: 'blog-item__img',
+                            wrap_mod: 'blog-item__img-wrap',
+                            link: true,
+                            aria_label: false,
+                        })
+                            +e.__content
+                                +e.__title-sm style tips
+                                +e.__title analysis of trends for 2021
+                                +e.__btn
+                                    span.btn read NOW

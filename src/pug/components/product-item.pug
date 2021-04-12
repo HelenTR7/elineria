@@ -1,0 +1,45 @@
+mixin product-item(args={})
+    .product-item(class=args.mod_class)
+        .product-item__top
+            +lazy-img({
+                img: args.img,
+                placeholder: pixel,
+                img_mod: 'product-item__img',
+                wrap_mod: 'product-item__img-wrap',
+                link: true,
+                aria_label: false,
+            })
+            if(!args.in_favourite)
+                a(href="javascript:;").to-favourite
+                    +icon('i-like')
+            .product-item__actions
+                if(args.sizes)
+                    .product-item__action-sizes
+                        each size in args.sizes
+                            .size(class=size.status)=size.name
+                if(args.not_in_stock)
+                    .product-item__no-stock the product is not yet in stock, when it appears we will notify you
+                else
+                    .product-item__action-to-card
+                        a(href="javascript:;").btn.btn--dark.btn--icon
+                            +icon('i-bag-fill')
+                            span Add to card
+                if(args.in_favourite)
+                    a(href="javascript:;").product-item__action-from-favourite
+                        +icon('i-like-fill')
+                        span Delete from Wishlist
+        .product-item__info
+            .product-item__status=args.status
+            a(href="#").product-item__title=args.title
+            .product-item__prices
+                span.current=args.price
+                if(args.old_price)
+                    span.old=args.old_price
+            if(args.colors)
+                .product-item__colors
+                    each color in args.colors
+                        span.color(style='background: '+ color +'; border-color: '+ color +';')
+            if(args.sizes && args.bottom_sizes)
+                .product-item__sizes
+                    each size in args.sizes
+                        .size(class=size.status)=size.name

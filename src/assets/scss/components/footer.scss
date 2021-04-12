@@ -1,0 +1,70 @@
+@import "../main/parameters";
+
+.footer {
+  .container {
+    max-width: 950px;
+  }
+  .row {
+    justify-content: space-between;
+  }
+  &__top {
+    border-top: 1px solid rgba(8,5,8,0.2);
+    border-bottom: 1px solid rgba(8,5,8,0.2);
+    padding: 40px 0 30px;
+  }
+  &__col {
+    padding: 0 10px;
+  }
+  &__title {
+    margin: 0 0 18px;
+  }
+  &__nav {}
+  &__list {}
+  &__list li {
+    margin: 0 0 5px;
+  }
+  &__list a {
+    font-size: 12px;
+    line-height: 15px;
+    color: #777;
+    &.tel {
+      font-size: 16px;
+    }
+    &:hover,
+    &:focus {
+      color: $c-primary;
+      .icon {
+        fill: $c-primary;
+      }
+    }
+  }
+  &__list .icon {
+    margin-right: 10px;
+    height: 16px;
+    width: 16px;
+    fill: $c-text;
+    transition: fill ease 0.3s;
+  }
+  &__nav--contacts li {
+    margin: 0 0 11px;
+  }
+  &__nav--contacts a {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom {
+    text-align: center;
+    padding: 20px 0;
+  }
+  &__logo-wrap {
+    display: inline-block;
+    margin: 0 0 9px;
+  }
+  &__logo {}
+  &__copy {
+    font-size: 12px;
+    line-height: 15px;
+    color: #777;
+  }
+}

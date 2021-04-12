@@ -1,0 +1,57 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'Contact'
+    - var pageBodyClass = ''
+    - var pageHeaderClass = ''
+
+block content
+
+    +b.contact.container.container--sm
+         +e('h1').__title.h1.h1--big Contact
+         +e.__main-row.row
+             .col-md-6
+                 +lazy-img({
+                     img: './assets/imgs/contact.jpg',
+                     placeholder: pixel,
+                     img_mod: 'contact__img',
+                     wrap_mod: 'contact__img-wrap',
+                     link: false,
+                     aria_label: false,
+                 })
+             .col-md-6
+                 +e.__main
+                     table
+                         tr
+                            td E-mail:
+                            td
+                                a(href="mailto:info@elineria.com") info@elineria.com
+                         tr
+                             td Adress:
+                             td Novi Sad Stevana Musića 15 21000 Novi Sad, Serbia
+                         tr
+                             td Working hours:
+                             td 12:00 - 21:00, seven days a week
+         +e('form').__form
+            +e.__form-title.h2 Contact form
+            +e.__form-body
+                .fieldgroup
+                    +icon('i-book')
+                    select.js-formstyler
+                        option Chouse topic of your appeal
+                .row
+                    .col-md-6
+                        .fieldgroup.fieldgroup--icon
+                            +icon('i-user')
+                            input.input(type="text" placeholder="Name")
+                    .col-md-6
+                        .fieldgroup.fieldgroup--icon
+                            +icon('i-mail')
+                            input.input(type="email" placeholder="E-mail")
+                .fieldgroup.fieldgroup--icon
+                    +icon('i-mess')
+                    textarea.textarea(placeholder="Message")
+                +e.__form-btn
+                    button.btn.btn--dark.btn--icon
+                        +icon('i-check')
+                        span Send

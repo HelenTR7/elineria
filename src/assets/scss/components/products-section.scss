@@ -1,0 +1,11 @@
+@import "../main/parameters";
+
+.products-section {
+  padding: 0 0 67px;
+  &__header {
+    margin: 0 0 32px;
+  }
+  &__slider {
+    position: relative;
+  }
+}

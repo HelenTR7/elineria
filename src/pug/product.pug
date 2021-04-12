@@ -1,0 +1,235 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'Item.Card'
+    - var pageBodyClass = ''
+    - var pageHeaderClass = ''
+
+block content
+    nav.breadcrumbs
+        .container
+            ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                    meta(itemprop="position" content="1")
+                    a(href="index.html" title="" itemprop="item")
+                        span(itemprop="name") Women
+                li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                    meta(itemprop="position" content="2")
+                    a(href="index.html" title="" itemprop="item")
+                        span(itemprop="name") Dress
+                li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                    meta(itemprop="position" content="3")
+                    span(itemprop="name") Dress with belt
+
+    +b.product.container
+        +e.__row.row
+            .col-md-7
+                include components/product-connected-sl
+            .col-md-5
+                +e.__main
+                    +e.__status New
+                    +e('h1').__title.h1 Dress With Belt
+                    +e.__prices
+                        +e('span').__current 1 300€
+                        +e('span').__old 1 800€
+                    +e.__colors
+                        +e('a').__color(href="#" style="background: #000;").active
+                        +e('a').__color(href="#" style="background: #A3ADAD;")
+                    +e.__color-name Color: Black
+                    +e.__sizes
+                        select.js-formstyler
+                            option Chouse size
+                            option XS-S On order
+                            option S-M Last size
+                            option L In stock
+                    +e.__actions
+                        +e.__counter
+                            +counter({
+                                value: 1,
+                                min_value: 1,
+                                max_value: 5,
+                                unit: '',
+                            })
+                        +e.__to-card
+                            a(href="javascript:;").btn.btn--dark.btn--icon
+                                +icon('i-bag-fill')
+                                span Add to card
+                        +e.__to-fav
+                            a(href="javascript:;").to-favourite
+                                +icon('i-like')
+                    +e.__toggles
+                        +e.__toggle.active
+                            +e.__toggle-title More about the product
+                            +e.__toggle-body
+                                p Vendor code: 000015
+                                p Composition: 100% Polyester
+                        +e.__toggle
+                            +e.__toggle-title Material
+                            +e.__toggle-body
+                                p Vendor code: 000015
+                                p Composition: 100% Polyester
+                        +e.__toggle
+                            +e.__toggle-title Size chart
+                            +e.__toggle-body
+                                p Vendor code: 000015
+                                p Composition: 100% Polyester
+                        +e.__toggle
+                            +e.__toggle-title Delivery
+                            +e.__toggle-body
+                                p Vendor code: 000015
+                                p Composition: 100% Polyester
+
+
+
+    include components/product-item
+    +b.products-section
+        .container
+            +e.__header.h2 This is often bought
+            +e.__slider.js-products-slider
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product27.jpg',
+                                status: 'New',
+                                title: 'Beaded earrings',
+                                price: '1 500€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#EBB74F'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product28.jpg',
+                                status: 'New',
+                                title: 'Square Toe Sandals',
+                                price: '1 200€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#121212'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: 'size--end'},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product29.jpg',
+                                status: 'New',
+                                title: 'Leather bag with nappa dressing',
+                                price: '800€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E5E5E5', '#B7A085'],
+                                sizes: '',
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product30.jpg',
+                                status: 'New',
+                                title: 'Elastic bow',
+                                price: '1 300€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#A3ADAD', '#9A2A28', '#080508'],
+                                sizes: '',
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product27.jpg',
+                                status: 'New',
+                                title: 'Beaded earrings',
+                                price: '1 500€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#EBB74F'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: 'size--end'},
+                                    {name: 'm', status: ''},
+                                {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product28.jpg',
+                                status: 'New',
+                                title: 'Square Toe Sandals',
+                                price: '1 200€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#121212'],
+                                sizes: [
+                                    {name: 'xs', status: 'size--ends'},
+                                    {name: 's', status: ''},
+                                    {name: 'm', status: 'size--end'},
+                                    {name: 'l', status: ''}
+                                ],
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product29.jpg',
+                                status: 'New',
+                                title: 'Leather bag with nappa dressing',
+                                price: '800€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#E5E5E5', '#B7A085'],
+                                sizes: '',
+                                bottom_sizes: ''
+                            })
+                        .swiper-slide
+                            +product-item({
+                                mod_class: '',
+                                img: './assets/imgs/product30.jpg',
+                                status: 'New',
+                                title: 'Elastic bow',
+                                price: '1 300€',
+                                old_price: '',
+                                in_favourite: '',
+                                not_in_stock: '',
+                                in_stock: '',
+                                colors: ['#A3ADAD', '#9A2A28', '#080508'],
+                                sizes: '',
+                                bottom_sizes: ''
+                            })
+                .swiper-button-prev
+                .swiper-button-next
+
+
+
