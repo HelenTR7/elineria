@@ -1,0 +1,204 @@
+@import "../main/parameters";
+
+.shopping-bag {
+  padding-top: 53px;
+  margin-bottom: 77px;
+  &__title {
+    margin: 0 0 46px;
+  }
+  &__empty {
+    background: #F5F5F5;
+    min-height: 487px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 98px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img-wrap {
+    margin: 0 0 27px;
+  }
+  &__img {}
+  &__empty-text {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    display: inline-block;
+    max-width: 420px;
+    margin: 0 0 55px;
+  }
+  &__empty-btn {
+    .btn {
+      flex-direction: row-reverse;
+      display: inline-flex;
+      .icon {
+        margin: 0 0 0 5px;
+        height: 11px;
+        width: 11px;
+        fill: #fff;
+      }
+    }
+  }
+
+   &__list {
+     margin-bottom: 58px;
+   }
+   &__list-head {
+     display: flex;
+     flex-wrap: wrap;
+     border-bottom: 1px solid rgba(0,0,0,0.2);
+     padding: 0 0 17px;
+     margin: 0 0 30px;
+   }
+   &__list-head .total {
+     flex: 1img();
+   }
+   &__list-head .amount {
+     flex: 0 0 220px;
+     max-width: 220px;
+   }
+   &__list-head .price {
+     flex: 0 0 200px;
+     max-width: 200px;
+   }
+   &__list-body {}
+   &__total {
+     text-align: right;
+     font-weight: 500;
+     color: #777777;
+     padding: 0 30px;
+     p {
+       display: inline-flex;
+     }
+     b {
+       color: #000;
+       font-weight: 700;
+       margin-left: 15px;
+     }
+     .icon-link {
+       margin-left: 15px;
+       color: #000;
+     }
+   }
+}
+
+.shb-item {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding: 0 0 30px;
+  margin: 0 0 30px;
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding-right: 10px;
+  }
+  &__img-wrap {
+    flex: 0 0 140px;
+    max-width: 140px;
+    padding-right: 30px;
+  }
+  &__img {
+    max-width: 100%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 17px;
+    line-height: 21px;
+    color: #555555;
+  }
+  &__list {
+    font-size: 13px;
+    line-height: 14px;
+    color: #555555;
+  }
+  &__list li {
+    margin: 5px 0 0;
+  }
+  &__list li.red {
+    color: red;
+  }
+
+  &__counter {
+    flex: 0 0 220px;
+    max-width: 220px;
+  }
+  &__counter .counter {
+    max-width: 120px;
+  }
+
+  &__price-box {
+    flex: 0 0 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__price {
+    font-weight: bold;
+  }
+  &__to-fav {
+    .active {
+      .icon {
+        fill: red;
+      }
+    }
+  }
+  &__remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(45deg);
+    .icon {
+      fill: #000;
+      height: 20px;
+      width: 20px;
+    }
+  }
+  &__remove .remove {}
+  &__remove .remove .icon {}
+}
+
+.shb-info {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px;
+  }
+  &__icon {}
+  &__icon .icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
+  &__title {
+    padding-left: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  &__body {}
+  &__body p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555555;
+  }
+  &__body a {
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 14px;
+    color: red;
+    text-decoration: underline;
+  }
+}

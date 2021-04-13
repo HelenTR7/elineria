@@ -85,3 +85,19 @@
   &:hover,
   &:focus {}
 }
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  .icon {
+    width: 18px;
+    height: 16px;
+    fill: #000;
+    margin-right: 7px;
+  }
+  span {
+    font-size: 14px;
+    text-decoration-line: underline;
+    color: #707070;
+  }
+}

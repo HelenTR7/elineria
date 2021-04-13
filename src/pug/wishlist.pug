@@ -1,0 +1,180 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'Wishlist'
+    - var pageBodyClass = ''
+    - var pageHeaderClass = ''
+
+block content
+    +b.wishlist.container
+        +e('h1').__title.h1.h1--big Wishlist
+        include components/product-item
+        .row
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog',
+                    img: './assets/imgs/product9.jpg',
+                    status: 'New',
+                    title: 'Midi dress with button closure',
+                    price: '1 200€',
+                    old_price: '',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#E2DBD5'],
+                    sizes: [
+                        {name: 'xs', status: ''},
+                        {name: 's', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog product-item--sale',
+                    img: './assets/imgs/product10.jpg',
+                    status: 'New',
+                    title: 'Trousers with patch pockets',
+                    price: '1 200€',
+                    old_price: '1 800€',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#E5E5E5','#B7A085'],
+                    sizes: [
+                        {name: 's', status: ''},
+                        {name: 'm', status: ''},
+                        {name: 'l', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog',
+                    img: './assets/imgs/product11.jpg',
+                    status: 'New',
+                    title: 'Tie Waist Midi Dress',
+                    price: '1 300€',
+                    old_price: '',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#A3ADAD','#746B62','#B5B4B5'],
+                    sizes: [
+                        {name: 's', status: ''},
+                        {name: 'm', status: ''},
+                        {name: 'l', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog',
+                    img: './assets/imgs/product12.jpg',
+                    status: 'New',
+                    title: 'Midi dress with button closure',
+                    price: '1 200€',
+                    old_price: '',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#E2DBD5'],
+                    sizes: [
+                        {name: 'xs', status: ''},
+                        {name: 's', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog',
+                    img: './assets/imgs/product13.jpg',
+                    status: 'New',
+                    title: 'Trousers with patch pockets',
+                    price: '800€',
+                    old_price: '',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#E5E5E5', '#B7A085'],
+                    sizes: [
+                        {name: 's', status: ''},
+                        {name: 'm', status: ''},
+                        {name: 'l', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog',
+                    img: './assets/imgs/product14.jpg',
+                    status: 'New',
+                    title: 'Tie Waist Midi Dress',
+                    price: '1 300€',
+                    old_price: '',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#A3ADAD', '#746B62', '#B5B4B5'],
+                    sizes: [
+                        {name: 's', status: ''},
+                        {name: 'm', status: ''},
+                        {name: 'l', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog',
+                    img: './assets/imgs/product15.jpg',
+                    status: 'New',
+                    title: 'Midi dress with button closure',
+                    price: '1 200€',
+                    old_price: '',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#E2DBD5'],
+                    sizes: [
+                        {name: 'xs', status: ''},
+                        {name: 's', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog product-item--sale',
+                    img: './assets/imgs/product16.jpg',
+                    status: 'New',
+                    title: 'Trousers with patch pockets',
+                    price: '800€',
+                    old_price: '1 000€',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#E5E5E5', '#B7A085'],
+                    sizes: [
+                        {name: 's', status: ''},
+                        {name: 'm', status: ''},
+                        {name: 'l', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })
+            .col-md-3
+                +product-item({
+                    mod_class: 'product-item--catalog',
+                    img: './assets/imgs/product17.jpg',
+                    status: 'New',
+                    title: 'Tie Waist Midi Dress',
+                    price: '1 300€',
+                    old_price: '',
+                    in_favourite: true,
+                    not_in_stock: '',
+                    in_stock: '',
+                    colors: ['#A3ADAD', '#746B62', '#B5B4B5'],
+                    sizes: [
+                        {name: 's', status: ''},
+                        {name: 'm', status: ''},
+                        {name: 'l', status: ''},
+                    ],
+                    bottom_sizes: true,
+                })

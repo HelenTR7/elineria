@@ -49,76 +49,385 @@
         </div>
       </header>
       <div class="main">
-        <div class="card container container container--sm">
-          <h1 class="card__title h1 h1 h1--big">Contact
+        <div class="shopping-bag container">
+          <h1 class="shopping-bag__title h1 h1 h1--big">Shopping Bag
           </h1>
-          <div class="card__main-row row">
-            <div class="col-md-6"><span class="lazy-img-wrap contact__img-wrap"><img class="lazy-img contact__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/contact.jpg" alt="img"/></span>
-            </div>
-            <div class="col-md-6">
-              <div class="card__main">
-                <table>
-                  <tr>
-                    <td>E-mail:</td>
-                    <td><a href="mailto:info@elineria.com">info@elineria.com</a></td>
-                  </tr>
-                  <tr>
-                    <td>Adress:</td>
-                    <td>Novi Sad Stevana Musića 15 21000 Novi Sad, Serbia</td>
-                  </tr>
-                  <tr>
-                    <td>Working hours:</td>
-                    <td>12:00 - 21:00, seven days a week</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-          <form class="card__form">
-            <div class="card__form-title h2">Contact form
-            </div>
-            <div class="card__form-body">
-              <div class="fieldgroup">
-                <svg class="icon">
-                  <use xlink:href="./assets/imgs/sprite.svg#i-book"></use>
-                </svg>
-                <select class="js-formstyler">
-                  <option>Chouse topic of your appeal</option>
-                </select>
+          <div class="shopping-bag__row row">
+            <div class="col-md-8">
+              <div class="shopping-bag__list">
+                <div class="shopping-bag__list-head">
+                  <div class="total">Total products: 3</div>
+                  <div class="amount">Amount</div>
+                  <div class="price">Price</div>
+                </div>
+                <div class="shopping-bag__list-body">
+                  <div class="shb-item">
+                    <div class="shb-item__main">
+                      <div class="shb-item__img-wrap"><img class="shb-item__img" src="./assets/imgs/shb1.jpg" alt="" role="presentation"/>
+                      </div>
+                      <div class="shb-item__info">
+                        <div class="shb-item__title">Midi dress with button closure
+                        </div>
+                        <ul class="shb-item__list">
+                          <li>Size: 2 year</li>
+                          <li>Vendor code: 3000000015</li>
+                          <li class="red">Left in stock: 3 units</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="shb-item__counter">
+                      <div class="counter counter--sm">
+                        <input class="counter__input js-counter-input" type="number" value="2" data-min-value="1" data-suffix="" data-max-value="3" name="NAME6784625831" aria-label="Счетчик"/>
+                        <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
+                        <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
+                        <div class="disabled-text">Макс. кол-во</div>
+                      </div>
+                    </div>
+                    <div class="shb-item__price-box">
+                      <div class="shb-item__price">800€
+                      </div>
+                      <div class="shb-item__to-fav"><a class="icon-link" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                          </svg><span>Add to favorites</span></a>
+                      </div>
+                      <div class="shb-item__remove"><a class="remove" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-plus"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shb-item">
+                    <div class="shb-item__main">
+                      <div class="shb-item__img-wrap"><img class="shb-item__img" src="./assets/imgs/shb2.jpg" alt="" role="presentation"/>
+                      </div>
+                      <div class="shb-item__info">
+                        <div class="shb-item__title">Trousers with patch pockets
+                        </div>
+                        <ul class="shb-item__list">
+                          <li>Size: M</li>
+                          <li>Vendor code: 3000000015</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="shb-item__counter">
+                      <div class="counter counter--sm">
+                        <input class="counter__input js-counter-input" type="number" value="1" data-min-value="1" data-suffix="" data-max-value="3" name="NAME86454751" aria-label="Счетчик"/>
+                        <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
+                        <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
+                        <div class="disabled-text">Макс. кол-во</div>
+                      </div>
+                    </div>
+                    <div class="shb-item__price-box">
+                      <div class="shb-item__price">1500€
+                      </div>
+                      <div class="shb-item__to-fav"><a class="icon-link active" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-like-fill"></use>
+                          </svg><span>Remove from favorites</span></a>
+                      </div>
+                      <div class="shb-item__remove"><a class="remove" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-plus"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shb-item">
+                    <div class="shb-item__main">
+                      <div class="shb-item__img-wrap"><img class="shb-item__img" src="./assets/imgs/shb3.jpg" alt="" role="presentation"/>
+                      </div>
+                      <div class="shb-item__info">
+                        <div class="shb-item__title">Leather bag with nappa dressing
+                        </div>
+                        <ul class="shb-item__list">
+                          <li>Vendor code: 3000000015</li>
+                          <li class="red">Left in stock: 2 units</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="shb-item__counter">
+                      <div class="counter counter--sm">
+                        <input class="counter__input js-counter-input" type="number" value="1" data-min-value="1" data-suffix="" data-max-value="2" name="NAME8519449780" aria-label="Счетчик"/>
+                        <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
+                        <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
+                        <div class="disabled-text">Макс. кол-во</div>
+                      </div>
+                    </div>
+                    <div class="shb-item__price-box">
+                      <div class="shb-item__price">1000€
+                      </div>
+                      <div class="shb-item__to-fav"><a class="icon-link active" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-like-fill"></use>
+                          </svg><span>Remove from favorites</span></a>
+                      </div>
+                      <div class="shb-item__remove"><a class="remove" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-plus"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shopping-bag__total">
+                  <p>TOTAL: 3 items worth<b>2 800€ +</b><a class="icon-link" href="#"><img class="icon" src="./assets/imgs/i-deliv.png" alt=""><span>delivery</span></a></p>
+                </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <div class="fieldgroup fieldgroup--icon">
-                    <svg class="icon">
-                      <use xlink:href="./assets/imgs/sprite.svg#i-user"></use>
-                    </svg>
-                    <input class="input" type="text" placeholder="Name">
+                  <div class="shb-info">
+                    <div class="shb-info__header">
+                      <div class="shb-info__icon">
+                        <svg class="icon">
+                          <use xlink:href="./assets/imgs/sprite.svg#"></use>
+                        </svg>
+                      </div>
+                      <div class="shb-info__title">free delivery
+                      </div>
+                    </div>
+                    <div class="shb-info__body">
+                      <p>Free shipping is available for orders over 3 000€. Aliquam erat volutpat. Suspendisse erat mi, tempus vel blandit in.</p><a href="#">Read more</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="fieldgroup fieldgroup--icon">
-                    <svg class="icon">
-                      <use xlink:href="./assets/imgs/sprite.svg#i-mail"></use>
-                    </svg>
-                    <input class="input" type="email" placeholder="E-mail">
+                  <div class="shb-info">
+                    <div class="shb-info__header">
+                      <div class="shb-info__icon">
+                        <svg class="icon">
+                          <use xlink:href="./assets/imgs/sprite.svg#"></use>
+                        </svg>
+                      </div>
+                      <div class="shb-info__title">exchange and return of goods
+                      </div>
+                    </div>
+                    <div class="shb-info__body">
+                      <p>Sed justo sem, cursus sit amet ante eu, sagittis mattis massa. Cras pellentesque faucibus molestie.</p><a href="#">Read more</a>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="fieldgroup fieldgroup--icon">
-                <svg class="icon">
-                  <use xlink:href="./assets/imgs/sprite.svg#i-mess"></use>
-                </svg>
-                <textarea class="textarea" placeholder="Message"></textarea>
-              </div>
-              <div class="card__form-btn">
-                <button class="btn btn--dark btn--icon">
-                  <svg class="icon">
-                    <use xlink:href="./assets/imgs/sprite.svg#i-check"></use>
-                  </svg><span>Send</span>
-                </button>
-              </div>
             </div>
-          </form>
+            <div class="col-md-4">
+              <p>форма</p>
+            </div>
+          </div>
+        </div>
+        <div class="products-section">
+          <div class="container">
+            <div class="products-section__header h2">Also buy with this
+            </div>
+            <div class="products-section__slider js-products-slider">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product27.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-sizes">
+                                    <div class="size size--ends">xs</div>
+                                    <div class="size size--end">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Beaded earrings</a>
+                                <div class="product-item__prices"><span class="current">1 500€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #EBB74F; border-color: #EBB74F;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product28.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-sizes">
+                                    <div class="size size--ends">xs</div>
+                                    <div class="size">s</div>
+                                    <div class="size size--end">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Square Toe Sandals</a>
+                                <div class="product-item__prices"><span class="current">1 200€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #121212; border-color: #121212;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product29.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Leather bag with nappa dressing</a>
+                                <div class="product-item__prices"><span class="current">800€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #E5E5E5; border-color: #E5E5E5;"></span><span class="color" style="background: #B7A085; border-color: #B7A085;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product30.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Elastic bow</a>
+                                <div class="product-item__prices"><span class="current">1 300€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #A3ADAD; border-color: #A3ADAD;"></span><span class="color" style="background: #9A2A28; border-color: #9A2A28;"></span><span class="color" style="background: #080508; border-color: #080508;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product27.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-sizes">
+                                    <div class="size size--ends">xs</div>
+                                    <div class="size size--end">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Beaded earrings</a>
+                                <div class="product-item__prices"><span class="current">1 500€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #EBB74F; border-color: #EBB74F;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product28.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-sizes">
+                                    <div class="size size--ends">xs</div>
+                                    <div class="size">s</div>
+                                    <div class="size size--end">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Square Toe Sandals</a>
+                                <div class="product-item__prices"><span class="current">1 200€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #121212; border-color: #121212;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product29.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Leather bag with nappa dressing</a>
+                                <div class="product-item__prices"><span class="current">800€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #E5E5E5; border-color: #E5E5E5;"></span><span class="color" style="background: #B7A085; border-color: #B7A085;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="swiper-slide">
+                            <div class="product-item">
+                              <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap" href="#"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product30.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                  <svg class="icon">
+                                    <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                  </svg></a>
+                                <div class="product-item__actions">
+                                  <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                      <svg class="icon">
+                                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                      </svg><span>Add to card</span></a></div>
+                                </div>
+                              </div>
+                              <div class="product-item__info">
+                                <div class="product-item__status">New</div><a class="product-item__title" href="#">Elastic bow</a>
+                                <div class="product-item__prices"><span class="current">1 300€</span>
+                                </div>
+                                <div class="product-item__colors"><span class="color" style="background: #A3ADAD; border-color: #A3ADAD;"></span><span class="color" style="background: #9A2A28; border-color: #9A2A28;"></span><span class="color" style="background: #080508; border-color: #080508;"></span>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="subscribe-section">
@@ -383,6 +692,8 @@
           <li class="pages-viget__menu-item"><a class="pages-viget__menu-link" href="./shopping-bag.html">Shopping bag</a>
           </li>
           <li class="pages-viget__menu-item"><a class="pages-viget__menu-link" href="./shopping-bag-saved.html">Shopping bag. Saved info</a>
+          </li>
+          <li class="pages-viget__menu-item"><a class="pages-viget__menu-link" href="./wishlist.html">Wishlist</a>
           </li>
         </ul>
       </div>

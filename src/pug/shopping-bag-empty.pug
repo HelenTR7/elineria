@@ -1,7 +1,7 @@
 extends layout/layout
 
 block vars
-    - var pageTitle = 'Shopping bag'
+    - var pageTitle = 'Shopping bag.Empty'
     - var pageBodyClass = ''
     - var pageHeaderClass = ''
 
@@ -9,122 +9,24 @@ block content
 
     +b.shopping-bag.container
         +e('h1').__title.h1.h1--big Shopping Bag
-        +e.__row.row
-            .col-md-8
-                +e.__list
-                    +e.__list-head
-                        .total Total products: 3
-                        .amount Amount
-                        .price Price
-                    +e.__list-body
-                        +b.shb-item
-                            +e.__main
-                                +e.__img-wrap
-                                    +e('img').__img(src="./assets/imgs/shb1.jpg" alt="")
-                                +e.__info
-                                    +e.__title Midi dress with button closure
-                                    +e('ul').__list
-                                        li Size: 2 year
-                                        li Vendor code: 3000000015
-                                        li.red Left in stock: 3 units
-                            +e.__counter
-                                +counter({
-                                    value: 2,
-                                    min_value: 1,
-                                    max_value: 3,
-                                    unit: '',
-                                }).counter--sm
-                            +e.__price-box
-                                +e.__price 800€
-                                +e.__to-fav
-                                    a(href='#').icon-link
-                                        +icon('i-like')
-                                        span Add to favorites
-                                +e.__remove
-                                    a(href="#").remove
-                                        +icon('i-plus')
-                        +b.shb-item
-                            +e.__main
-                                +e.__img-wrap
-                                    +e('img').__img(src="./assets/imgs/shb2.jpg" alt="")
-                                +e.__info
-                                    +e.__title Trousers with patch pockets
-                                    +e('ul').__list
-                                        li Size: M
-                                        li Vendor code: 3000000015
-                            +e.__counter
-                                +counter({
-                                    value: 1,
-                                    min_value: 1,
-                                    max_value: 3,
-                                    unit: '',
-                                }).counter--sm
-                            +e.__price-box
-                                +e.__price 1500€
-                                +e.__to-fav
-                                    a(href='#').icon-link.active
-                                        +icon('i-like-fill')
-                                        span Remove from favorites
-                                +e.__remove
-                                    a(href="#").remove
-                                        +icon('i-plus')
-                        +b.shb-item
-                            +e.__main
-                                +e.__img-wrap
-                                    +e('img').__img(src="./assets/imgs/shb3.jpg" alt="")
-                                +e.__info
-                                    +e.__title Leather bag with nappa dressing
-                                    +e('ul').__list
-                                        li Vendor code: 3000000015
-                                        li.red Left in stock: 2 units
-                            +e.__counter
-                                +counter({
-                                    value: 1,
-                                    min_value: 1,
-                                    max_value: 2,
-                                    unit: '',
-                                }).counter--sm
-                            +e.__price-box
-                                +e.__price 1000€
-                                +e.__to-fav
-                                    a(href='#').icon-link.active
-                                        +icon('i-like-fill')
-                                        span Remove from favorites
-                                +e.__remove
-                                    a(href="#").remove
-                                        +icon('i-plus')
-
-                    +e.__total
-                        p TOTAL: 3 items worth
-                            b 2 800€ +
-                            a(href="#").icon-link
-                                img.icon(src="./assets/imgs/i-deliv.png" alt="")
-                                span delivery
-                .row
-                    .col-md-6
-                        +b.shb-info
-                            +e.__header
-                                +e.__icon
-                                    +icon('')
-                                +e.__title free delivery
-                            +e.__body
-                                p Free shipping is available for orders over 3 000€. Aliquam erat volutpat. Suspendisse erat mi, tempus vel blandit in.
-                                a(href="#") Read more
-                    .col-md-6
-                        +b.shb-info
-                            +e.__header
-                                +e.__icon
-                                    +icon('')
-                                +e.__title exchange and return of goods
-                            +e.__body
-                                p Sed justo sem, cursus sit amet ante eu, sagittis mattis massa. Cras pellentesque faucibus molestie.
-                                a(href="#") Read more
-            .col-md-4
-                p форма
+        +e.__empty
+            +lazy-img({
+                img: './assets/imgs/shb-empty.png',
+                placeholder: pixel,
+                img_mod: 'shopping-bag__img',
+                wrap_mod: 'shopping-bag__img-wrap',
+                link: false,
+                aria_label: false,
+            })
+            +e.__empty-text You haven't placed either one item per shopping bag
+            +e.__empty-btn
+                a(href="#").btn.btn--dark.btn--icon
+                    +icon('i-plus')
+                    span start shopping
     include components/product-item
     +b.products-section
         .container
-            +e.__header.h2 Also buy with this
+            +e.__header.h2 Most Popular
             +e.__slider.js-products-slider
                 .swiper-container
                     .swiper-wrapper
