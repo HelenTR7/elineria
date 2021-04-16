@@ -53,7 +53,7 @@
      margin: 0 0 30px;
    }
    &__list-head .total {
-     flex: 1img();
+     flex: 1;
    }
    &__list-head .amount {
      flex: 0 0 220px;
@@ -64,6 +64,12 @@
      max-width: 200px;
    }
    &__list-body {}
+   &__total-box {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   }
+   &__promocode {}
    &__total {
      text-align: right;
      font-weight: 500;
@@ -82,6 +88,30 @@
        color: #000;
      }
    }
+}
+
+.promocode {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .icon {
+    position: absolute;
+    top: 16px;
+    left: 13px;
+    height: 16px;
+    width: 16px;
+    fill: #ccc;
+  }
+  input {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 5px 0 39px;
+    min-width: 238px;
+  }
+  .btn {
+    font-weight: 400;
+    min-width: 95px;
+  }
 }
 
 .shb-item {
@@ -126,13 +156,17 @@
     color: red;
   }
 
-  &__counter {
+  &__counter-box {
     flex: 0 0 220px;
     max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__counter .counter {
     max-width: 120px;
   }
+  &__sb-btn {}
 
   &__price-box {
     flex: 0 0 200px;
@@ -145,7 +179,7 @@
   &__price {
     font-weight: bold;
   }
-  &__to-fav {
+  &__fav-btn {
     .active {
       .icon {
         fill: red;
@@ -163,22 +197,34 @@
       width: 20px;
     }
   }
-  &__remove .remove {}
-  &__remove .remove .icon {}
+  &__remove .remove {
+    &:hover .icon {
+      fill: $c-primary;
+    }
+  }
+  &__remove .remove .icon {
+    transition: fill ease 0.3s;
+  }
 }
 
 .shb-info {
   &__header {
     display: flex;
     align-items: center;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
   }
-  &__icon {}
-  &__icon .icon {
+  &__icon {
     height: 40px;
     width: 40px;
     border-radius: 50%;
     border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon .icon {
+    height: 20px;
+    width: 20px;
   }
   &__title {
     padding-left: 15px;

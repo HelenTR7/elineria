@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>Item.Card</title>
+    <title>Shopping bag.Saved</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -112,140 +112,300 @@
         </nav>
       </header>
       <div class="main">
-        <nav class="breadcrumbs">
-          <div class="container">
-            <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <meta itemprop="position" content="1"><a href="index.html" title="" itemprop="item"><span itemprop="name">Women</span></a>
-              </li>
-              <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <meta itemprop="position" content="2"><a href="index.html" title="" itemprop="item"><span itemprop="name">Dress</span></a>
-              </li>
-              <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <meta itemprop="position" content="3"><span itemprop="name">Dress with belt</span>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="product container">
-          <div class="product__row row">
-            <div class="col-md-7">
-              <div class="product-connected-sl">
-                <div class="product-connected-sl__wrap">
-                  <div class="product-connected-sl__main swiper js-swiper-main">
-                    <div class="swiper-container">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a class="product-connected-sl__link" data-fancybox="gallery" href="./assets/imgs/product-main.jpg"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/product-main.jpg" alt="img" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a>
+        <div class="shopping-bag container">
+          <h1 class="shopping-bag__title h1 h1 h1--big">Shopping Bag
+          </h1>
+          <div class="shopping-bag__row row">
+            <div class="col-md-8">
+              <div class="shopping-bag__list">
+                <div class="shopping-bag__list-head">
+                  <div class="total">Total products: 3</div>
+                  <div class="amount">Amount</div>
+                  <div class="price">Price</div>
+                </div>
+                <div class="shopping-bag__list-body">
+                  <div class="shb-item">
+                    <div class="shb-item__main"><a class="shb-item__img-wrap" href="#"><img class="shb-item__img" src="./assets/imgs/shb1.jpg" alt="" role="presentation"/></a>
+                      <div class="shb-item__info"><a class="shb-item__title" href="#">Midi dress with button closure</a>
+                        <ul class="shb-item__list">
+                          <li>Size: 2 year</li>
+                          <li>Vendor code: 3000000015</li>
+                          <li class="red">Left in stock: 3 units</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="shb-item__counter-box">
+                      <div class="shb-item__counter">
+                        <div class="counter counter--sm">
+                          <input class="counter__input js-counter-input" type="number" value="2" data-min-value="1" data-suffix="" data-max-value="3" name="NAME7899159568" aria-label="Счетчик"/>
+                          <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
+                          <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
+                          <div class="disabled-text">Макс. кол-во</div>
                         </div>
-                        <div class="swiper-slide"><a class="product-connected-sl__link" data-fancybox="gallery" href="./assets/imgs/product-main.jpg"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/product-main.jpg" alt="img2" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a>
-                        </div>
-                        <div class="swiper-slide"><a class="product-connected-sl__link" data-fancybox="gallery" href="./assets/imgs/product-main.jpg"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/product-main.jpg" alt="img3" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a>
-                        </div>
-                        <div class="swiper-slide"><a class="product-connected-sl__link" data-fancybox="gallery" href="./assets/imgs/product-main.jpg"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/product-main.jpg" alt="img4" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></a>
-                        </div>
+                      </div>
+                      <div class="shb-item__sb-btn"><a class="icon-link active" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-remove"></use>
+                          </svg><span>Remove from cart</span></a>
+                      </div>
+                    </div>
+                    <div class="shb-item__price-box">
+                      <div class="shb-item__price">800€
+                      </div>
+                      <div class="shb-item__fav-btn"><a class="icon-link" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                          </svg><span>Add to favorites</span></a>
+                      </div>
+                      <div class="shb-item__remove"><a class="remove" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-plus"></use>
+                          </svg></a>
                       </div>
                     </div>
                   </div>
-                  <div class="product-connected-sl__nav swiper js-swiper-thumbs">
-                    <div class="swiper-container">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/prew1.jpg" alt="img" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                        </div>
-                        <div class="swiper-slide"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/prew2.jpg" alt="img" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                        </div>
-                        <div class="swiper-slide"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/prew3.jpg" alt="img" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                        </div>
-                        <div class="swiper-slide"><img class="product-connected-sl__img swiper-lazy" data-src="./assets/imgs/prew4.jpg" alt="img" title="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                        </div>
+                  <div class="shb-item">
+                    <div class="shb-item__main"><a class="shb-item__img-wrap" href="#"><img class="shb-item__img" src="./assets/imgs/shb2.jpg" alt="" role="presentation"/></a>
+                      <div class="shb-item__info"><a class="shb-item__title" href="#">Trousers with patch pockets</a>
+                        <ul class="shb-item__list">
+                          <li>Size: M</li>
+                          <li>Vendor code: 3000000015</li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="swiper-button-prev th-swiper-button-prev"></div>
-                    <div class="swiper-button-next th-swiper-button-next"></div>
+                    <div class="shb-item__counter-box">
+                      <div class="shb-item__counter">
+                        <div class="counter counter--sm">
+                          <input class="counter__input js-counter-input" type="number" value="1" data-min-value="1" data-suffix="" data-max-value="3" name="NAME8764316799" aria-label="Счетчик"/>
+                          <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
+                          <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
+                          <div class="disabled-text">Макс. кол-во</div>
+                        </div>
+                      </div>
+                      <div class="shb-item__sb-btn"><a class="icon-link active" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-remove"></use>
+                          </svg><span>Remove from cart</span></a>
+                      </div>
+                    </div>
+                    <div class="shb-item__price-box">
+                      <div class="shb-item__price">1500€
+                      </div>
+                      <div class="shb-item__fav-btn"><a class="icon-link active" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-like-fill"></use>
+                          </svg><span>Remove from favorites</span></a>
+                      </div>
+                      <div class="shb-item__remove"><a class="remove" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-plus"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shb-item">
+                    <div class="shb-item__main"><a class="shb-item__img-wrap" href="#"><img class="shb-item__img" src="./assets/imgs/shb3.jpg" alt="" role="presentation"/></a>
+                      <div class="shb-item__info"><a class="shb-item__title" href="#">Leather bag with nappa dressing</a>
+                        <ul class="shb-item__list">
+                          <li>Vendor code: 3000000015</li>
+                          <li class="red">Left in stock: 2 units</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="shb-item__counter-box">
+                      <div class="shb-item__counter">
+                        <div class="counter counter--sm">
+                          <input class="counter__input js-counter-input" type="number" value="1" data-min-value="1" data-suffix="" data-max-value="2" name="NAME6885351659" aria-label="Счетчик"/>
+                          <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
+                          <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
+                          <div class="disabled-text">Макс. кол-во</div>
+                        </div>
+                      </div>
+                      <div class="shb-item__sb-btn"><a class="icon-link active" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-remove"></use>
+                          </svg><span>Remove from cart</span></a>
+                      </div>
+                    </div>
+                    <div class="shb-item__price-box">
+                      <div class="shb-item__price">1000€
+                      </div>
+                      <div class="shb-item__fav-btn"><a class="icon-link active" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-like-fill"></use>
+                          </svg><span>Remove from favorites</span></a>
+                      </div>
+                      <div class="shb-item__remove"><a class="remove" href="#">
+                          <svg class="icon">
+                            <use xlink:href="./assets/imgs/sprite.svg#i-plus"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shopping-bag__total-box">
+                  <div class="shopping-bag__promocode">
+                    <div class="promocode">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-sale"></use>
+                      </svg>
+                      <input type="text" placeholder="Promocode">
+                      <button class="btn btn--dark" type="submit">Add</button>
+                    </div>
+                  </div>
+                  <div class="shopping-bag__total">
+                    <p>TOTAL:<b>2 800€ +</b><a class="icon-link" href="#"><img class="icon" src="./assets/imgs/i-deliv.png" alt=""><span>delivery</span></a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="shb-info">
+                    <div class="shb-info__header">
+                      <div class="shb-info__icon">
+                        <svg class="icon">
+                          <use xlink:href="./assets/imgs/sprite.svg#i-free"></use>
+                        </svg>
+                      </div>
+                      <div class="shb-info__title">free delivery
+                      </div>
+                    </div>
+                    <div class="shb-info__body">
+                      <p>Free shipping is available for orders over 3 000€. Aliquam erat volutpat. Suspendisse erat mi, tempus vel blandit in.</p><a href="#">Read more</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="shb-info">
+                    <div class="shb-info__header">
+                      <div class="shb-info__icon">
+                        <svg class="icon">
+                          <use xlink:href="./assets/imgs/sprite.svg#i-arrs"></use>
+                        </svg>
+                      </div>
+                      <div class="shb-info__title">exchange and return of goods
+                      </div>
+                    </div>
+                    <div class="shb-info__body">
+                      <p>Sed justo sem, cursus sit amet ante eu, sagittis mattis massa. Cras pellentesque faucibus molestie.</p><a href="#">Read more</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
-              <div class="product__main">
-                <div class="product__status">New
+            <div class="col-md-4">
+              <form class="sb-form">
+                <div class="sb-form__header">Checkout
                 </div>
-                <h1 class="product__title h1">Dress With Belt
-                </h1>
-                <div class="product__prices"><span class="product__current">1 300€</span><span class="product__old">1 800€</span>
-                </div>
-                <div class="product__colors"><a class="product__color active" href="#" style="background: #000;"></a><a class="product__color" href="#" style="background: #A3ADAD;"></a>
-                </div>
-                <div class="product__color-name">Color: Black
-                </div>
-                <div class="product__sizes">
-                  <select class="js-formstyler">
-                    <option>Chouse size</option>
-                    <option>XS-S On order</option>
-                    <option>S-M Last size</option>
-                    <option>L In stock</option>
-                  </select>
-                </div>
-                <div class="product__actions">
-                  <div class="product__counter">
-                    <div class="counter">
-                      <input class="counter__input js-counter-input" type="number" value="1" data-min-value="1" data-suffix="" data-max-value="5" name="NAME9061692802" aria-label="Счетчик"/>
-                      <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
-                      <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
-                      <div class="disabled-text">Макс. кол-во</div>
-                    </div>
-                  </div>
-                  <div class="product__to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                <div class="sb-form__body">
+                  <fieldset class="sb-form__fieldset">
+                    <div class="fieldgroup fieldgroup--icon">
                       <svg class="icon">
-                        <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                      </svg><span>Add to card</span></a>
-                  </div>
-                  <div class="product__to-fav"><a class="to-favourite" href="javascript:;">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-user"></use>
+                      </svg>
+                      <input class="input" type="text" placeholder="Name and surname">
+                    </div>
+                    <div class="fieldgroup fieldgroup--icon">
                       <svg class="icon">
-                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                      </svg></a>
+                        <use xlink:href="./assets/imgs/sprite.svg#i-phone"></use>
+                      </svg>
+                      <input class="input" type="tel" placeholder="Phone number">
+                    </div>
+                    <div class="fieldgroup fieldgroup--icon fieldgroup--select">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-map"></use>
+                      </svg>
+                      <select class="js-formstyler">
+                        <option>City</option>
+                        <option>City 2</option>
+                        <option>City 3</option>
+                      </select>
+                    </div>
+                    <div class="fieldgroup fieldgroup--icon">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-house"></use>
+                      </svg>
+                      <input class="input" type="text" placeholder="Address">
+                    </div>
+                    <div class="fieldgroup fieldgroup--icon">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-post"></use>
+                      </svg>
+                      <input class="input" type="text" placeholder="Postcode">
+                    </div>
+                    <div class="fieldgroup fieldgroup--icon">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-mail"></use>
+                      </svg>
+                      <input class="input" type="email" placeholder="E-mail">
+                    </div>
+                    <div class="fieldgroup">
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="subscr" checked><span class="label">Subscribe to news and discounts</span>
+                      </label>
+                    </div>
+                    <div class="fieldgroup fieldgroup--icon">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-mess"></use>
+                      </svg>
+                      <textarea class="textarea" placeholder="Message"></textarea>
+                    </div>
+                  </fieldset>
+                  <fieldset class="sb-form__fieldset">
+                    <legend class="sb-form__legend">Delivery method
+                    </legend>
+                    <div class="fieldgroup">
+                      <label class="radio-item">
+                        <input type="radio" name="deliv" checked><span class="label">Postal service (+ 10€)</span>
+                      </label>
+                    </div>
+                    <div class="fieldgroup">
+                      <label class="radio-item">
+                        <input type="radio" name="deliv"><span class="label">By courier (+ 50 €)</span>
+                      </label>
+                    </div>
+                    <div class="fieldgroup">
+                      <label class="radio-item">
+                        <input type="radio" name="deliv"><span class="label">Express delivery (+ 100 €)</span>
+                      </label>
+                    </div>
+                    <div class="fieldgroup">
+                      <label class="radio-item">
+                        <input type="radio" name="deliv"><span class="label">Local pickup (+ 0€)</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="sb-form__fieldset">
+                    <legend class="sb-form__legend">Payment method
+                    </legend>
+                    <div class="fieldgroup">
+                      <label class="radio-item">
+                        <input type="radio" name="pay" checked><span class="label">Online payment</span>
+                      </label>
+                    </div>
+                    <div class="fieldgroup">
+                      <label class="radio-item">
+                        <input type="radio" name="pay"><span class="label">Payment to the courier upon receipt</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <div class="sb-form__total">TOTAL with delivery: 2 700€
+                  </div>
+                  <div class="sb-form__submit">
+                    <button class="btn btn--dark btn--icon" type="submit">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-check"></use>
+                      </svg><span>send an order</span>
+                    </button>
                   </div>
                 </div>
-                <div class="product__toggles">
-                  <div class="product__toggle active">
-                    <div class="product__toggle-title">More about the product
-                    </div>
-                    <div class="product__toggle-body">
-                      <p>Vendor code: 000015</p>
-                      <p>Composition: 100% Polyester</p>
-                    </div>
-                  </div>
-                  <div class="product__toggle">
-                    <div class="product__toggle-title">Material
-                    </div>
-                    <div class="product__toggle-body">
-                      <p>Vendor code: 000015</p>
-                      <p>Composition: 100% Polyester</p>
-                    </div>
-                  </div>
-                  <div class="product__toggle">
-                    <div class="product__toggle-title">Size chart
-                    </div>
-                    <div class="product__toggle-body">
-                      <p>Vendor code: 000015</p>
-                      <p>Composition: 100% Polyester</p>
-                    </div>
-                  </div>
-                  <div class="product__toggle">
-                    <div class="product__toggle-title">Delivery
-                    </div>
-                    <div class="product__toggle-body">
-                      <p>Vendor code: 000015</p>
-                      <p>Composition: 100% Polyester</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
         <div class="products-section">
           <div class="container">
-            <div class="products-section__header h2">This is often bought
+            <div class="products-section__header h2">Also buy with this
             </div>
             <div class="products-section__slider js-products-slider">
               <div class="swiper-container">

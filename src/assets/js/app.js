@@ -18,6 +18,7 @@ const Application = {
         this.eventList.mask();
 
         //app events
+        this.eventList.nav();
         this.eventList.sliders();
         this.eventList.connectedSliders();
         this.eventList.formstyler();
@@ -51,6 +52,18 @@ const Application = {
             });
         },
 
+        nav: function (){
+            $('.burger').on('click touch', function () {
+                let _this = $(this);
+                _this.toggleClass('active');
+                $('.drop-nav').toggleClass('active').slideToggle();
+                $('.header').toggleClass('header--open');
+            });
+            $('.drop-nav .nav-item-subnav .icon').on('click touch', function () {
+                let _this = $(this);
+                _this.closest('.nav-link-wr').toggleClass('active').next().slideToggle();
+            });
+        },
         sliders: function(){
             $('.js-products-slider').each(function(i){
                 let productsSwiper = new Swiper($('.js-products-slider .swiper-container')[i], {

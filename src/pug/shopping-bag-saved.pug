@@ -1,7 +1,7 @@
 extends layout/layout
 
 block vars
-    - var pageTitle = 'Shopping bag'
+    - var pageTitle = 'Shopping bag.Saved'
     - var pageBodyClass = ''
     - var pageHeaderClass = ''
 
@@ -35,9 +35,13 @@ block content
                                         max_value: 3,
                                         unit: '',
                                     }).counter--sm
+                                +e.__sb-btn
+                                    a(href='#').icon-link.active
+                                        +icon('i-remove')
+                                        span Remove from cart
                             +e.__price-box
                                 +e.__price 800€
-                                +e.__to-fav
+                                +e.__fav-btn
                                     a(href='#').icon-link
                                         +icon('i-like')
                                         span Add to favorites
@@ -61,9 +65,13 @@ block content
                                         max_value: 3,
                                         unit: '',
                                     }).counter--sm
+                                +e.__sb-btn
+                                    a(href='#').icon-link.active
+                                        +icon('i-remove')
+                                        span Remove from cart
                             +e.__price-box
                                 +e.__price 1500€
-                                +e.__to-fav
+                                +e.__fav-btn
                                     a(href='#').icon-link.active
                                         +icon('i-like-fill')
                                         span Remove from favorites
@@ -87,9 +95,13 @@ block content
                                         max_value: 2,
                                         unit: '',
                                     }).counter--sm
+                                +e.__sb-btn
+                                    a(href='#').icon-link.active
+                                        +icon('i-remove')
+                                        span Remove from cart
                             +e.__price-box
                                 +e.__price 1000€
-                                +e.__to-fav
+                                +e.__fav-btn
                                     a(href='#').icon-link.active
                                         +icon('i-like-fill')
                                         span Remove from favorites
@@ -97,9 +109,15 @@ block content
                                     a(href="#").remove
                                         +icon('i-plus')
 
+
                     +e.__total-box
+                        +e.__promocode
+                            +b.promocode
+                                +icon('i-sale')
+                                input(type="text" placeholder="Promocode")
+                                button(type="submit").btn.btn--dark Add
                         +e.__total
-                            p TOTAL: 3 items worth
+                            p TOTAL:
                                 b 2 800€ +
                                 a(href="#").icon-link
                                     img.icon(src="./assets/imgs/i-deliv.png" alt="")

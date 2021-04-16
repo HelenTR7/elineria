@@ -1,0 +1,65 @@
++b('form').sb-form
+    +e.__header Checkout
+    +e.__body
+        +e('fieldset').__fieldset
+            .fieldgroup.fieldgroup--icon
+                +icon('i-user')
+                input.input(type="text" placeholder="Name and surname")
+            .fieldgroup.fieldgroup--icon
+                +icon('i-phone')
+                input.input(type="tel" placeholder="Phone number")
+            .fieldgroup.fieldgroup--icon.fieldgroup--select
+                +icon('i-map')
+                select.js-formstyler
+                    option City
+                    option City 2
+                    option City 3
+            .fieldgroup.fieldgroup--icon
+                +icon('i-house')
+                input.input(type="text" placeholder="Address")
+            .fieldgroup.fieldgroup--icon
+                +icon('i-post')
+                input.input(type="text" placeholder="Postcode")
+            .fieldgroup.fieldgroup--icon
+                +icon('i-mail')
+                input.input(type="email" placeholder="E-mail")
+            .fieldgroup
+                label.checkbox-item
+                    input(type="checkbox" name="subscr" checked)
+                    span.label Subscribe to news and discounts
+            .fieldgroup.fieldgroup--icon
+                +icon('i-mess')
+                textarea.textarea(placeholder="Message")
+        +e('fieldset').__fieldset
+            +e('legend').__legend Delivery method
+            .fieldgroup
+                label.radio-item
+                    input(type="radio" name="deliv" checked)
+                    span.label Postal service (+ 10€)
+            .fieldgroup
+                label.radio-item
+                    input(type="radio" name="deliv")
+                    span.label By courier (+ 50 €)
+            .fieldgroup
+                label.radio-item
+                    input(type="radio" name="deliv")
+                    span.label Express delivery (+ 100 €)
+            .fieldgroup
+                label.radio-item
+                    input(type="radio" name="deliv")
+                    span.label Local pickup (+ 0€)
+        +e('fieldset').__fieldset
+            +e('legend').__legend Payment method
+            .fieldgroup
+                label.radio-item
+                    input(type="radio" name="pay" checked)
+                    span.label Online payment
+            .fieldgroup
+                label.radio-item
+                    input(type="radio" name="pay")
+                    span.label Payment to the courier upon receipt
+        +e.__total TOTAL with delivery: 2 700€
+        +e.__submit
+            button(type="submit").btn.btn--dark.btn--icon
+                +icon('i-check')
+                span send an order

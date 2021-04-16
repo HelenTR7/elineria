@@ -1,0 +1,53 @@
+@import "../main/parameters";
+
+.sb-form {
+  margin-left: 30px;
+  &__header {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 3px 0 13px;
+  }
+  &__body {
+    background: #F5F5F5;
+    padding: 30px 30px;
+  }
+  &__fieldset {
+    margin: 0 0 17px;
+    .fieldgroup {
+      margin: 0 0 7px;
+    }
+    &:first-child {
+      margin: 0 0 11px;
+      .fieldgroup {
+        margin: 0 0 10px;
+      }
+    }
+  }
+  &__legend {
+    margin: 0 0 14px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #777777;
+  }
+  &__total {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 32px 0 0;
+  }
+  &__submit {
+    margin: 21px 0 0;
+    .btn {
+      width: 100%;
+      flex-direction: row-reverse;
+      .icon {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+}

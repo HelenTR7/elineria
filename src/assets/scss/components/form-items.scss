@@ -2,71 +2,77 @@
 
 .radio-item {
   display: inline-block;
-  margin: 0 19px 15px 0;
+  margin: 0;
   .label {
+    font-size: 14px;
+    color: #777777;
+    position: relative;
+    display: inline-block;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: #F2F2F2;
-    border: 1px solid #F2F2F2;
-    border-radius: 30px;
-    padding: 15px 30px 15px 20px;
+    padding-left: 27px;
     transition: all ease 0.4s;
-  }
-  img {
-    margin: 0 22px 0 0;
-    height: 22px;
-    width: auto;
-  }
-  .text {
-    font-weight: 600;
-    font-size: 20px;
-    color: #74707C;
-    transition: all ease 0.4s;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      border: 1px solid #000;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+    }
   }
   input {
     display: none;
-    &:checked + .label {
-      border-color: $c-primary;
-      background: #fff;
-      transition: all ease 0.4s;
-      img {}
-      .text {
-        color: $c-primary;
-        transition: all ease 0.4s;
-      }
+    &:checked + .label::after {
+      background: #000;
     }
   }
 }
 .checkbox-item {
   display: inline-block;
-  margin: 0 6px 10px 0;
+  margin: 3px 0 9px;
   .label {
+    font-size: 14px;
+    color: #777777;
+    position: relative;
     display: inline-block;
     cursor: pointer;
-    font-size: 13px;
-    border: 1px solid #E1DBDB;
-    background: #fff;
-    border-radius: 3px;
-    padding: 5px 11px;
+    padding-left: 27px;
     transition: all ease 0.4s;
-    b {
-      display: none;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      border: 1px solid #000;
+      height: 14px;
+      width: 14px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      height: 8px;
+      width: 8px;
     }
   }
   input {
     display: none;
-    &:checked + .label {
-      border-color: $c-primary;
-      background: $c-primary;
-      color: #fff;
-      transition: all ease 0.4s;
-      img {}
-      .text {
-        color: $c-primary;
-        transition: all ease 0.4s;
-      }
+    &:checked + .label::after {
+      background: #000;
     }
   }
 }
@@ -75,14 +81,6 @@
   position: relative;
   margin: 0 0 14px;
 
-  .label {
-    display: block;
-    font-weight: 500;
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #737373;
-    margin: 0 0 7px;
-  }
   .input {
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -104,150 +102,10 @@
     position: absolute;
     top: 17px;
     left: 16px;
-    z-index: 1;
+    z-index: 11;
     width: 14px;
     max-height: 16px;
     fill: #ccc;
-  }
-
-  .error-mess {
-    font-size: 12px;
-    line-height: 15px;
-    color: $c-primary;
-    text-align: right;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    display: none;
-  }
-
-  .radio-item {
-    display: inline-block;
-    margin: 0;
-    .label {
-      text-transform: initial;
-      cursor: pointer;
-      display: block;
-      background: rgba(0,0,0,0.0);
-      border: 0;
-      border-radius: 0;
-      padding: 0;
-      margin: 0;
-    }
-    .text {
-      padding-left: 35px;
-      display: block;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 26px;
-      color: $c-text;
-      position: relative;
-      margin: 0 0 3px;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 1px;
-        left: 0;
-        width: 20px;
-        height: 20px;
-        border: 1px solid #BABABA;
-        border-radius: 50%;
-      }
-    }
-    .text2 {
-      font-weight: 400;
-      padding-left: 35px;
-      display: block;
-      font-size: 14px;
-      line-height: 20px;
-      color: $c-text;
-      margin: 5px 0 0;
-    }
-    input {
-      //display: none;
-      opacity: 0;
-      visibility: hidden;
-      height: 1px;
-      width: 1px;
-      position: absolute;
-      z-index: -1;
-      &:checked + .label {
-        .text {
-          color: $c-text;
-          &::before {
-            border: 1px solid $c-primary;
-            background: radial-gradient(#DB332D 0%, #DB332D 25%, transparent 35%, transparent);
-          }
-        }
-      }
-    }
-  }
-  .radio-item--big {
-    display: block;
-    .label {
-      min-height: 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      border: 1px solid rgba(0,0,0,0.0);
-      padding: 20px 20px 17px;
-      background: #FFFFFF;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-    input {
-      &:checked + .label {
-        border-color: $c-primary;
-      }
-    }
-  }
-
-  .checkbox-item {
-    display: block;
-    margin: 0 0 15px;
-    .label {
-      display: block;
-      position: relative;
-      padding: 0 20px 0 35px;
-      border: 0;
-      background: rgba(0,0,0,0.0);
-      color: $c-text;
-      border-radius: 0;
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -3px;
-        height: 18px;
-        width: 18px;
-        border: 1px solid #C7CCD7;
-        border-radius: 3px;
-      }
-      b {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 12px;
-        color: #878787;
-        font-weight: normal;
-      }
-    }
-    input {
-      &:checked + .label {
-        background: rgba(0,0,0,0.0);
-        color: $c-text;
-        transition: all ease 0.4s;
-        &::before {
-          border-color: $c-primary;
-          background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1287 1.42861L10.8179 1.11808C10.4766 0.776069 9.9174 0.776069 9.57503 1.11808L4.29682 6.39702L2.42389 4.52482C2.0826 4.18316 1.52308 4.18316 1.18179 4.52518L0.871262 4.83534C0.529973 5.17699 0.529973 5.73615 0.871262 6.07781L3.67395 8.88339C4.01561 9.22468 4.57477 9.22468 4.91642 8.88339L11.1287 2.67107C11.4697 2.32942 11.4697 1.77026 11.1287 1.42861Z' fill='%23DB332D'/%3E%3C/svg%3E%0A");
-          background-size: 10px 15px;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-      }
-    }
   }
 
   &.has-error {
@@ -265,6 +123,9 @@
     .input {
       padding-left: 40px;
     }
+  }
+  &--select {
+    z-index: 22;
   }
 }
 
