@@ -2,8 +2,10 @@
     .container
         +e.__inner
             +e.__col
-                +e.__title New arriwas
+                //-+e.__title New arriwas
                 +e('ul').nav-list
+                    li.nav-item
+                        a(href="#").nav-link New arriwas
                     li.nav-item.nav-item-subnav
                         span.nav-link-wr
                             a(href="#").nav-link Women
@@ -68,13 +70,17 @@
                             li.nav-item-lvl2
                                 a(href="#").nav-link-lvl2 Limited
             +e.__col
-                +e.__title About Brend
+                //-+e.__title About Brend
                 +e('ul').nav-list
+                    li.nav-item
+                        a(href="#").nav-link About Brend
                     li.nav-item
                         a(href="#").nav-link Contact
             +e.__col
-                +e.__title Service & benefits
+                //-+e.__title Service & benefits
                 +e('ul').nav-list
+                    li.nav-item
+                        a(href="#").nav-link Service & benefits
                     li.nav-item
                         a(href="#").nav-link Return terms
                     li.nav-item

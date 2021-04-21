@@ -18,6 +18,7 @@ const Application = {
         this.eventList.mask();
 
         //app events
+        this.eventList.productImgs();
         this.eventList.nav();
         this.eventList.sliders();
         this.eventList.connectedSliders();
@@ -52,6 +53,15 @@ const Application = {
             });
         },
 
+        productImgs: function(){
+            $('[data-color-num]').on('click touch', function(){
+                let _this = $(this),
+                    dotNum = _this.attr('data-color-num'),
+                    imgsList = _this.closest('.product-item').find('.product-item__img-wrap');
+                    imgsList.removeClass('active');
+                    imgsList.eq(dotNum).addClass('active');
+            })
+        },
         nav: function (){
             $('.burger').on('click touch', function () {
                 let _this = $(this);

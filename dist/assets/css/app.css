@@ -3378,7 +3378,15 @@ input[type=number] {
   fill: #ad986e; }
 
 .product-item__img-wrap {
-  display: block; }
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: opacity ease 0.4s, visibility ease 0.4s; }
+  .product-item__img-wrap.active {
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px; }
 
 .product-item__img {
   width: 100%;

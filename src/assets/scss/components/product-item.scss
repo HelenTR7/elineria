@@ -21,6 +21,16 @@
   }
   &__img-wrap {
     display: block;
+
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: opacity ease 0.4s, visibility ease 0.4s;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      max-height: 1000px;
+    }
   }
   &__img {
     width: 100%;

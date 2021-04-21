@@ -1,14 +1,38 @@
 mixin product-item(args={})
     .product-item(class=args.mod_class)
         .product-item__top
-            +lazy-img({
-                img: args.img,
-                placeholder: pixel,
-                img_mod: 'product-item__img',
-                wrap_mod: 'product-item__img-wrap',
-                link: true,
-                aria_label: false,
-            })
+            if(args.imgs_list)
+                - var n = 0;
+                each item in args.imgs_list
+                    if(n==0)
+                        +lazy-img({
+                            img: item,
+                            placeholder: pixel,
+                            img_mod: 'product-item__img',
+                            wrap_mod: 'product-item__img-wrap',
+                            link: true,
+                            aria_label: false,
+                        })(data-img-num=n class="active")
+                    else
+                        +lazy-img({
+                            img: item,
+                            placeholder: pixel,
+                            img_mod: 'product-item__img',
+                            wrap_mod: 'product-item__img-wrap',
+                            link: true,
+                            aria_label: false,
+                        })(data-img-num=n)
+                    - n++;
+            else
+                - var n = 0;
+                +lazy-img({
+                    img: args.img,
+                    placeholder: pixel,
+                    img_mod: 'product-item__img',
+                    wrap_mod: 'product-item__img-wrap',
+                    link: true,
+                    aria_label: false,
+                })(data-img-num=n class="active")
             if(!args.in_favourite)
                 a(href="javascript:;").to-favourite
                     +icon('i-like')
@@ -37,8 +61,10 @@ mixin product-item(args={})
                     span.old=args.old_price
             if(args.colors)
                 .product-item__colors
+                    - var n=0;
                     each color in args.colors
-                        span.color(style='background: '+ color +'; border-color: '+ color +';')
+                        a.color(href="javascript:;" style='background: '+ color +'; border-color: '+ color +';' data-color-num=n)
+                        - n++;
             if(args.sizes && args.bottom_sizes)
                 .product-item__sizes
                     each size in args.sizes

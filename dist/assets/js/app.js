@@ -17,6 +17,7 @@ var Application = {
     this.eventList.svgPolifill();
     this.eventList.mask(); //app events
 
+    this.eventList.productImgs();
     this.eventList.nav();
     this.eventList.sliders();
     this.eventList.connectedSliders();
@@ -47,6 +48,16 @@ var Application = {
         "showMaskOnHover": false,
         "showMaskOnFocus": true,
         "clearMaskOnLostFocus": true
+      });
+    },
+    productImgs: function productImgs() {
+      $('[data-color-num]').on('click touch', function () {
+        var _this = $(this),
+            dotNum = _this.attr('data-color-num'),
+            imgsList = _this.closest('.product-item').find('.product-item__img-wrap');
+
+        imgsList.removeClass('active');
+        imgsList.eq(dotNum).addClass('active');
       });
     },
     nav: function nav() {
