@@ -87,14 +87,31 @@ const Application = {
                     //     delay: 5000,
                     // },
                     //loop: true,
-                    slidesPerView: 4,
-                    spaceBetween: 20,
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
 
                     // Navigation arrows
                     navigation: {
                         nextEl: $('.js-products-slider .swiper-button-next')[i],
                         prevEl: $('.js-products-slider .swiper-button-prev')[i],
                     },
+                    breakpoints: {
+                        1024: {
+                            spaceBetween: 20,
+                            slidesPerView: 4,
+                            simulateTouch: false,
+                        },
+                        768: {
+                            spaceBetween: 20,
+                            slidesPerView: 3,
+                            simulateTouch: false,
+                        },
+                        0: {
+                            spaceBetween: 10,
+                            slidesPerView: 'auto',
+                            simulateTouch: false,
+                        },
+                    }
                 });
             });
             $('.js-cat-slider').each(function(i){
@@ -109,7 +126,7 @@ const Application = {
                     //     delay: 5000,
                     // },
                     //loop: true,
-                    slidesPerView: 6,
+                    slidesPerView: 'auto',
                     spaceBetween: 20,
 
                     // Navigation arrows
@@ -117,6 +134,23 @@ const Application = {
                         nextEl: $('.js-cat-slider .swiper-button-next')[i],
                         prevEl: $('.js-cat-slider .swiper-button-prev')[i],
                     },
+                    breakpoints: {
+                        1024: {
+                            spaceBetween: 20,
+                            slidesPerView: 6,
+                            simulateTouch: false,
+                        },
+                        768: {
+                            spaceBetween: 20,
+                            slidesPerView: 4,
+                            simulateTouch: false,
+                        },
+                        0: {
+                            spaceBetween: 10,
+                            slidesPerView: 'auto',
+                            simulateTouch: false,
+                        },
+                    }
                 });
             });
         },

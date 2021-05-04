@@ -48,3 +48,20 @@
   }
   &__btn {}
 }
+
+
+@media (max-width: $md - 1) {
+  .blog-item {
+    margin: 0 0 20px;
+    &__title-sm {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 0 2px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+      margin: 0 0 10px;
+    }
+  }
+}

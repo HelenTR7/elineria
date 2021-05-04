@@ -6,18 +6,22 @@ block vars
     - var pageHeaderClass = ''
 
 block content
-    +b.first-section(style="background-image:url('./assets/imgs/banner.jpg'); color: #fff;")
+    +b.first-section(style="color: #fff;")
+        picture.first-section__picture
+            source(srcset="./assets/imgs/banner.jpg" media="(min-width:576px)")
+            source(srcset="./assets/imgs/banner-sm.jpg" media="(min-width:0px)")
+            img(src="./assets/imgs/banner.jpg" alt="img")
         .container
             +e.__inner
                 +e.__title-sm New arrivals
-                +e('h1').__title Spring/Summer 2021
+                +e('h1').__title Spring/<br>Summer 2021
                 +e.__btn
                     a(href="#").btn Shop now
     +b.main-cat-section
         .container
             .row
-                .col-md-4
-                    +e('a').__item(href="#")
+                .col-md-4.col-12
+                    +e('a').__item.main-cat-section__item--f(href="#")
                         +e.__item-title.h2 Women
                         +lazy-bg({
                             img: './assets/imgs/cat-women.jpg',
@@ -26,7 +30,7 @@ block content
                             link: false,
                             aria_label: false,
                         })
-                .col-md-4
+                .col-md-4.col-6
                     +e('a').__item(href="#")
                         +e.__item-title.h2 Teens
                         +lazy-bg({
@@ -36,7 +40,7 @@ block content
                             link: false,
                             aria_label: false,
                         })
-                .col-md-4
+                .col-md-4.col-6
                     +e('a').__item(href="#")
                         +e.__item-title.h2 Kids
                         +lazy-bg({
@@ -543,7 +547,7 @@ block content
                 +e.__title.h2 Our blog
                 +e('a').__link.link(href="#") Read More
             .row
-                .col-md-6
+                .col-lg-6
                     +b.blog-item
                         +lazy-bg({
                             img: './assets/imgs/blog1.jpg',
@@ -557,7 +561,7 @@ block content
                                 +e.__title SPRING/SUMMER 2021
                                 +e.__btn
                                     span.btn read NOW
-                .col-md-6
+                .col-lg-6
                     +b.blog-item
                         +lazy-bg({
                             img: './assets/imgs/blog2.jpg',

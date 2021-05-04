@@ -109,3 +109,9 @@
     }
   }
 }
+
+@media (max-width: $sm - 1) {
+  .link {
+    font-size: 14px;
+  }
+}

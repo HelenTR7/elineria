@@ -50,3 +50,23 @@
     }
   }
 }
+
+@media (max-width: $sm - 1) {
+  .main-cat-section {
+    padding: 0 0 19px;
+    &__item--f {
+      .main-cat-section__item-img-wr {
+        padding-bottom: 67%;
+      }
+    }
+    &__item {
+      margin: 0 0 19px;
+    }
+    &__item-title {
+      margin: 0 0 10px;
+    }
+    &__item-img {
+      background-position: 50% 0;
+    }
+  }
+}

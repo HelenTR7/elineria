@@ -109,12 +109,16 @@
         </nav>
       </header>
       <div class="main">
-        <div class="first-section" style="background-image:url('./assets/imgs/banner.jpg'); color: #fff;">
+        <div class="first-section" style="color: #fff;">
+          <picture class="first-section__picture">
+            <source srcset="./assets/imgs/banner.jpg" media="(min-width:576px)">
+            <source srcset="./assets/imgs/banner-sm.jpg" media="(min-width:0px)"><img src="./assets/imgs/banner.jpg" alt="img">
+          </picture>
           <div class="container">
             <div class="first-section__inner">
               <div class="first-section__title-sm">New arrivals
               </div>
-              <h1 class="first-section__title">Spring/Summer 2021
+              <h1 class="first-section__title">Spring/<br>Summer 2021
               </h1>
               <div class="first-section__btn"><a class="btn" href="#">Shop now</a>
               </div>
@@ -124,11 +128,11 @@
         <div class="main-cat-section">
           <div class="container">
             <div class="row">
-              <div class="col-md-4"><a class="main-cat-section__item" href="#"><span class="main-cat-section__item-title h2">Women</span><span class="lazy-img-wrap main-cat-section__item-img-wr"><span class="lazy-img main-cat-section__item-img" data-bg="./assets/imgs/cat-women.jpg"></span></span></a>
+              <div class="col-md-4 col-12"><a class="main-cat-section__item main-cat-section__item main-cat-section__item--f" href="#"><span class="main-cat-section__item-title h2">Women</span><span class="lazy-img-wrap main-cat-section__item-img-wr"><span class="lazy-img main-cat-section__item-img" data-bg="./assets/imgs/cat-women.jpg"></span></span></a>
               </div>
-              <div class="col-md-4"><a class="main-cat-section__item" href="#"><span class="main-cat-section__item-title h2">Teens</span><span class="lazy-img-wrap main-cat-section__item-img-wr"><span class="lazy-img main-cat-section__item-img" data-bg="./assets/imgs/cat-teens.jpg"></span></span></a>
+              <div class="col-md-4 col-6"><a class="main-cat-section__item" href="#"><span class="main-cat-section__item-title h2">Teens</span><span class="lazy-img-wrap main-cat-section__item-img-wr"><span class="lazy-img main-cat-section__item-img" data-bg="./assets/imgs/cat-teens.jpg"></span></span></a>
               </div>
-              <div class="col-md-4"><a class="main-cat-section__item" href="#"><span class="main-cat-section__item-title h2">Kids</span><span class="lazy-img-wrap main-cat-section__item-img-wr"><span class="lazy-img main-cat-section__item-img" data-bg="./assets/imgs/cat-kids.jpg"></span></span></a>
+              <div class="col-md-4 col-6"><a class="main-cat-section__item" href="#"><span class="main-cat-section__item-title h2">Kids</span><span class="lazy-img-wrap main-cat-section__item-img-wr"><span class="lazy-img main-cat-section__item-img" data-bg="./assets/imgs/cat-kids.jpg"></span></span></a>
               </div>
             </div>
           </div>
@@ -664,7 +668,7 @@
               </div><a class="blog-section__link link" href="#">Read More</a>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <div class="blog-item"><a class="lazy-img-wrap blog-item__img-wrap" href="#"><span class="lazy-img blog-item__img" data-bg="./assets/imgs/blog1.jpg"></span>
                     <div class="blog-item__content">
                       <div class="blog-item__title-sm">NEW ARRIVALS
@@ -676,7 +680,7 @@
                     </div></a>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <div class="blog-item"><a class="lazy-img-wrap blog-item__img-wrap" href="#"><span class="lazy-img blog-item__img" data-bg="./assets/imgs/blog2.jpg"></span>
                     <div class="blog-item__content">
                       <div class="blog-item__title-sm">style tips

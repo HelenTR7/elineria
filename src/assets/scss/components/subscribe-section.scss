@@ -51,3 +51,21 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: $sm - 1) {
+  .subscribe-section {
+    &__title {
+      font-size: 14px;
+    }
+    &__header {
+      margin: 0 0 20px;
+    }
+    &__form {
+      .btn {
+        font-size: 0;
+        min-width: 50px;
+        max-width: 50px;
+      }
+    }
+  }
+}

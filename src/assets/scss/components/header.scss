@@ -108,3 +108,37 @@
     fill: $c-primary;
   }
 }
+
+@media (max-width: $sm - 1) {
+  .main {
+    padding-top: 40px;
+  }
+  .burger {
+    width: 25px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  .header-cat {
+    display: none;
+  }
+  .header__inner {
+    height: 40px;
+  }
+  .header__logo img {
+    width: 80px;
+  }
+  .header__actions {
+    margin-left: 0;
+    width: 100%;
+    .search {
+      margin-right: auto;
+    }
+  }
+  .header__action:not(:first-child) {
+    margin-left: 7px;
+  }
+  .header__action .icon {
+    height: 17px;
+    width: 17px;
+  }
+}

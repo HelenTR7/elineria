@@ -177,3 +177,9 @@ button:hover {}
     font-size: 25px;
     line-height: 31px;
 }
+@media (max-width: $sm - 1) {
+    .h2 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}

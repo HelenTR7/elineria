@@ -68,3 +68,30 @@
     color: #777;
   }
 }
+
+@media (max-width: $sm - 1) {
+  .footer {
+    &__title {
+      margin: 0 0 5px;
+    }
+    .row > div {
+      width: 100%;
+      margin: 0 0 10px;
+      &:nth-child(1) {
+        order: 2;
+      }
+      &:nth-child(2) {
+        order: 2;
+      }
+      &:nth-child(3) {
+        order: 2;
+      }
+      &:nth-child(4) {
+        order: 2;
+      }
+      &:nth-child(5) {
+        order: 1;
+      }
+    }
+  }
+}

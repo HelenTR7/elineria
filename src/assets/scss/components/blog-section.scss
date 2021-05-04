@@ -11,3 +11,11 @@
   &__title {}
   &__link {}
 }
+@media (max-width: $sm - 1) {
+  .blog-section {
+    padding: 0 0 10px;
+    &__header {
+      margin: 0 0 15px;
+    }
+  }
+}

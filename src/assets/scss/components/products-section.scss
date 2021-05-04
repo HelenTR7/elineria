@@ -9,3 +9,18 @@
     position: relative;
   }
 }
+
+@media (max-width: $sm - 1) {
+  .products-section {
+    padding: 0 0 39px;
+    margin-right: -10px;
+    &__header {
+      margin: 0 0 15px;
+    }
+    &__slider {
+      .swiper-slide {
+        width: 120px;
+      }
+    }
+  }
+}

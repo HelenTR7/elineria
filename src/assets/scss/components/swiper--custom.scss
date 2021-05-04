@@ -43,3 +43,11 @@
   transform: rotate(45deg) skew(10deg, 10deg);
 }
 
+@media (max-width: $sm - 1) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: -17px;
+    display: none;
+  }
+}
+
