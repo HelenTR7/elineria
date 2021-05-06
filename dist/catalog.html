@@ -111,10 +111,15 @@
       <div class="main">
         <div class="catalog container">
           <h1 class="h1 page-title">Women</h1>
-          <div class="row">
-            <div class="col-md-2">
+          <div class="catalog__filter-btn"><span class="fltr-btn">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-filters"></use>
+              </svg></span></div>
+          <div class="catalog__grid">
+            <div class="catalog__nav">
               <nav class="catalog-nav">
                 <ul class="catalog-nav__list">
+                  <li><a class="active" href="#">All</a></li>
                   <li><a href="#">Dress</a></li>
                   <li><a href="#">Skirts</a></li>
                   <li><a href="#">Pants</a></li>
@@ -126,312 +131,421 @@
                 </ul>
               </nav>
             </div>
-            <div class="col-md-10">
-              <div class="catalog-filters">
-                <div class="catalog-filters__item">
-                  <select class="js-formstyler">
-                    <option>Size</option>
-                    <option>Size 2</option>
-                    <option>Size 3</option>
-                  </select>
+            <div class="catalog__filters">
+              <form class="catalog-filters">
+                <div class="catalog-filters__list">
+                  <div class="catalog-filters__item">
+                    <div class="catalog-filters__item-title js-custom-toggle">Size<span class="arr"></span>
+                    </div>
+                    <div class="catalog-filters__item-body">
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="size" checked><span class="label">XS</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="size"><span class="label">S</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="size"><span class="label">M</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="size"><span class="label">L</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="size"><span class="label">XL</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="size"><span class="label">XXL</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="size"><span class="label">One size</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-filters__item">
+                    <div class="catalog-filters__item-title js-custom-toggle">Color<span class="arr"></span>
+                    </div>
+                    <div class="catalog-filters__item-body">
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color" checked><span class="label">Black</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color"><span class="label">White</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color"><span class="label">Brown</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color"><span class="label">Yellow</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color"><span class="label">Red</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color"><span class="label">Pink</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color"><span class="label">Green</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="color"><span class="label">Blue</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-filters__item">
+                    <div class="catalog-filters__item-title js-custom-toggle">Material<span class="arr"></span>
+                    </div>
+                    <div class="catalog-filters__item-body">
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="material" checked><span class="label">Cotton</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="material"><span class="label">Linen</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="material"><span class="label">Silk</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="material"><span class="label">Wool</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="material"><span class="label">Viscose</span>
+                        </label>
+                      </div>
+                      <div class="fieldgroup">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="material"><span class="label">Acrylic</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="catalog-filters__item">
-                  <select class="js-formstyler">
-                    <option>Color</option>
-                    <option>Color 2</option>
-                    <option>Color 3</option>
-                  </select>
+                <div class="catalog-filters__actions">
+                  <button class="btn btn--bordered">Применить</button><a class="btn" href="#">Сбросить</a>
                 </div>
-                <div class="catalog-filters__item">
-                  <select class="js-formstyler">
-                    <option>Material</option>
-                    <option>Material 2</option>
-                    <option>Material 3</option>
-                  </select>
-                </div>
-              </div>
+              </form>
+            </div>
+            <div class="catalog__list">
               <div class="row">
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product9.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">xs</div>
-                                        <div class="size">s</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
-                                  </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Midi dress with button closure</a>
-                                    <div class="product-item__prices"><span class="current">1 200€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E2DBD5; border-color: #E2DBD5;" data-color-num="0"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product9.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">xs</div>
                                       <div class="size">s</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog product-item--sale">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product10.jpg" alt="img"/></a><a class="lazy-img-wrap product-item__img-wrap" href="#" data-img-num="1"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product11.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">s</div>
-                                        <div class="size">m</div>
-                                        <div class="size">l</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Midi dress with button closure</a>
+                                  <div class="product-item__prices"><span class="current">1 200€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Trousers with patch pockets</a>
-                                    <div class="product-item__prices"><span class="current">1 200€</span><span class="old">1 800€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E5E5E5; border-color: #E5E5E5;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #B7A085; border-color: #B7A085;" data-color-num="1"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E2DBD5; border-color: #E2DBD5;" data-color-num="0"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">xs</div>
+                                    <div class="size">s</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog product-item--sale">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product10.jpg" alt="img"/></a><a class="lazy-img-wrap product-item__img-wrap" href="#" data-img-num="1"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product11.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">s</div>
                                       <div class="size">m</div>
                                       <div class="size">l</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product11.jpg" alt="img"/></a><a class="lazy-img-wrap product-item__img-wrap" href="#" data-img-num="1"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product12.jpg" alt="img"/></a><a class="lazy-img-wrap product-item__img-wrap" href="#" data-img-num="2"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product13.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">s</div>
-                                        <div class="size">m</div>
-                                        <div class="size">l</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Trousers with patch pockets</a>
+                                  <div class="product-item__prices"><span class="current">1 200€</span><span class="old">1 800€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Tie Waist Midi Dress</a>
-                                    <div class="product-item__prices"><span class="current">1 300€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #A3ADAD; border-color: #A3ADAD;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #746B62; border-color: #746B62;" data-color-num="1"></a><a class="color" href="javascript:;" style="background: #B5B4B5; border-color: #B5B4B5;" data-color-num="2"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E5E5E5; border-color: #E5E5E5;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #B7A085; border-color: #B7A085;" data-color-num="1"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product11.jpg" alt="img"/></a><a class="lazy-img-wrap product-item__img-wrap" href="#" data-img-num="1"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product12.jpg" alt="img"/></a><a class="lazy-img-wrap product-item__img-wrap" href="#" data-img-num="2"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product13.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">s</div>
                                       <div class="size">m</div>
                                       <div class="size">l</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product12.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">xs</div>
-                                        <div class="size">s</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Tie Waist Midi Dress</a>
+                                  <div class="product-item__prices"><span class="current">1 300€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Midi dress with button closure</a>
-                                    <div class="product-item__prices"><span class="current">1 200€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E2DBD5; border-color: #E2DBD5;" data-color-num="0"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #A3ADAD; border-color: #A3ADAD;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #746B62; border-color: #746B62;" data-color-num="1"></a><a class="color" href="javascript:;" style="background: #B5B4B5; border-color: #B5B4B5;" data-color-num="2"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product12.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">xs</div>
                                       <div class="size">s</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product13.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">s</div>
-                                        <div class="size">m</div>
-                                        <div class="size">l</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Midi dress with button closure</a>
+                                  <div class="product-item__prices"><span class="current">1 200€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Trousers with patch pockets</a>
-                                    <div class="product-item__prices"><span class="current">800€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E5E5E5; border-color: #E5E5E5;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #B7A085; border-color: #B7A085;" data-color-num="1"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E2DBD5; border-color: #E2DBD5;" data-color-num="0"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">xs</div>
+                                    <div class="size">s</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product13.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">s</div>
                                       <div class="size">m</div>
                                       <div class="size">l</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product14.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">s</div>
-                                        <div class="size">m</div>
-                                        <div class="size">l</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Trousers with patch pockets</a>
+                                  <div class="product-item__prices"><span class="current">800€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Tie Waist Midi Dress</a>
-                                    <div class="product-item__prices"><span class="current">1 300€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #A3ADAD; border-color: #A3ADAD;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #746B62; border-color: #746B62;" data-color-num="1"></a><a class="color" href="javascript:;" style="background: #B5B4B5; border-color: #B5B4B5;" data-color-num="2"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E5E5E5; border-color: #E5E5E5;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #B7A085; border-color: #B7A085;" data-color-num="1"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product14.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">s</div>
                                       <div class="size">m</div>
                                       <div class="size">l</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product15.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">xs</div>
-                                        <div class="size">s</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Tie Waist Midi Dress</a>
+                                  <div class="product-item__prices"><span class="current">1 300€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Midi dress with button closure</a>
-                                    <div class="product-item__prices"><span class="current">1 200€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E2DBD5; border-color: #E2DBD5;" data-color-num="0"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #A3ADAD; border-color: #A3ADAD;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #746B62; border-color: #746B62;" data-color-num="1"></a><a class="color" href="javascript:;" style="background: #B5B4B5; border-color: #B5B4B5;" data-color-num="2"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product15.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">xs</div>
                                       <div class="size">s</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog product-item--sale">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product16.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">s</div>
-                                        <div class="size">m</div>
-                                        <div class="size">l</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Midi dress with button closure</a>
+                                  <div class="product-item__prices"><span class="current">1 200€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Trousers with patch pockets</a>
-                                    <div class="product-item__prices"><span class="current">800€</span><span class="old">1 000€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E5E5E5; border-color: #E5E5E5;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #B7A085; border-color: #B7A085;" data-color-num="1"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E2DBD5; border-color: #E2DBD5;" data-color-num="0"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">xs</div>
+                                    <div class="size">s</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog product-item--sale">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product16.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">s</div>
                                       <div class="size">m</div>
                                       <div class="size">l</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
-                </div>
-                <div class="col-md-4">
-                                <div class="product-item product-item--catalog">
-                                  <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product17.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
-                                      <svg class="icon">
-                                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
-                                      </svg></a>
-                                    <div class="product-item__actions">
-                                      <div class="product-item__action-sizes">
-                                        <div class="size">s</div>
-                                        <div class="size">m</div>
-                                        <div class="size">l</div>
-                                      </div>
-                                      <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
-                                          <svg class="icon">
-                                            <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
-                                          </svg><span>Add to card</span></a></div>
-                                    </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Trousers with patch pockets</a>
+                                  <div class="product-item__prices"><span class="current">800€</span><span class="old">1 000€</span>
                                   </div>
-                                  <div class="product-item__info">
-                                    <div class="product-item__status">New</div><a class="product-item__title" href="#">Tie Waist Midi Dress</a>
-                                    <div class="product-item__prices"><span class="current">1 300€</span>
-                                    </div>
-                                    <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #A3ADAD; border-color: #A3ADAD;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #746B62; border-color: #746B62;" data-color-num="1"></a><a class="color" href="javascript:;" style="background: #B5B4B5; border-color: #B5B4B5;" data-color-num="2"></a>
-                                    </div>
-                                    <div class="product-item__sizes">
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #E5E5E5; border-color: #E5E5E5;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #B7A085; border-color: #B7A085;" data-color-num="1"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-6 col-md-4">
+                              <div class="product-item product-item--catalog">
+                                <div class="product-item__top"><a class="lazy-img-wrap product-item__img-wrap active" href="#" data-img-num="0"><img class="lazy-img product-item__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="./assets/imgs/product17.jpg" alt="img"/></a><a class="to-favourite" href="javascript:;">
+                                    <svg class="icon">
+                                      <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                                    </svg></a>
+                                  <div class="product-item__actions">
+                                    <div class="product-item__action-sizes">
                                       <div class="size">s</div>
                                       <div class="size">m</div>
                                       <div class="size">l</div>
                                     </div>
+                                    <div class="product-item__action-to-card"><a class="btn btn--dark btn--icon" href="javascript:;">
+                                        <svg class="icon">
+                                          <use xlink:href="./assets/imgs/sprite.svg#i-bag-fill"></use>
+                                        </svg><span>Add to card</span></a></div>
                                   </div>
                                 </div>
+                                <div class="product-item__info">
+                                  <div class="product-item__status">New</div><a class="product-item__title" href="#">Tie Waist Midi Dress</a>
+                                  <div class="product-item__prices"><span class="current">1 300€</span>
+                                  </div>
+                                  <div class="product-item__colors"><a class="color" href="javascript:;" style="background: #A3ADAD; border-color: #A3ADAD;" data-color-num="0"></a><a class="color" href="javascript:;" style="background: #746B62; border-color: #746B62;" data-color-num="1"></a><a class="color" href="javascript:;" style="background: #B5B4B5; border-color: #B5B4B5;" data-color-num="2"></a>
+                                  </div>
+                                  <div class="product-item__sizes">
+                                    <div class="size">s</div>
+                                    <div class="size">m</div>
+                                    <div class="size">l</div>
+                                  </div>
+                                </div>
+                              </div>
                 </div>
               </div>
               <div class="pagination">

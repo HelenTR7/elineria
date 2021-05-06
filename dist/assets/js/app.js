@@ -224,6 +224,22 @@ var Application = {
         selectSearchLimit: 5,
         selectSmartPositioning: false
       });
+      $('.js-custom-toggle').on('click touch', function () {
+        var _this = $(this);
+
+        if (_this.hasClass('active')) {
+          _this.removeClass('active');
+
+          _this.next().slideUp();
+        } else {
+          _this.addClass('active');
+
+          _this.next().slideDown();
+        }
+      });
+      $('.catalog__filter-btn').on('click touch', function () {
+        $('.catalog-filters').slideToggle();
+      });
     }
   }
 };

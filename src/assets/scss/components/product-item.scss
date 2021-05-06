@@ -215,15 +215,6 @@
 
 .product-item--catalog {
   margin: 0 0 33px;
-  .product-item {
-    &__top .to-favourite .icon {
-      width: 34px;
-      height: 30px;
-    }
-    &__info {
-      padding: 28px 20px;
-    }
-  }
 }
 
 @media (max-width: $sm - 1) {
@@ -242,7 +233,6 @@
 
     &__info {
       padding: 8px 0 0;
-      text-align: left;
       position: relative;
     }
     &__status {
@@ -258,7 +248,7 @@
       overflow: hidden;
     }
     &__prices {
-      margin: 0;
+      margin: 0 0 5px;
     }
     &__prices .current {
       font-size: 12px;
@@ -267,16 +257,15 @@
       font-size: 12px;
     }
     &__colors {
-      margin: 0;
-      justify-content: flex-end;
-      position: absolute;
-      bottom: 3px;
-      right: 0;
+      margin: 0 0 5px;
     }
     &__colors .color {
       height: 10px;
       width: 10px;
       margin: 0 0 0 5px;
+    }
+    &__sizes .size {
+      font-size: 12px;
     }
   }
 }

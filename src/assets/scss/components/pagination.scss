@@ -55,3 +55,24 @@
     padding: 0 8px;
   }
 }
+
+@media (max-width: $sm - 1) {
+  .pagination {
+    margin: 0 0 40px;
+    &::before {
+      display: none;
+    }
+    &__arr {
+      margin: 0 10px;
+      border: 1px solid;
+      height: 35px;
+      width: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        display: none;
+      }
+    }
+  }
+}

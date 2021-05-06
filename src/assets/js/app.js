@@ -224,6 +224,19 @@ const Application = {
                 selectSearch: true,
                 selectSearchLimit: 5,
                 selectSmartPositioning: false,
+            });
+            $('.js-custom-toggle').on('click touch', function (){
+                let _this = $(this);
+                if(_this.hasClass('active')){
+                    _this.removeClass('active');
+                    _this.next().slideUp();
+                } else {
+                    _this.addClass('active');
+                    _this.next().slideDown();
+                }
+            });
+            $('.catalog__filter-btn').on('click touch', function (){
+                $('.catalog-filters').slideToggle();
             })
         },
     }

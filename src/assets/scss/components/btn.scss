@@ -68,9 +68,9 @@
 }
 
 .btn--bordered {
-  color: $c-primary;
-  border-color: $c-primary;
-
+  border: 1px solid #000;
+  color: #000;
+  font-weight: 400;
   &:hover,
   &:focus {
     color: #fff;

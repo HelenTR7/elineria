@@ -8,10 +8,15 @@ block vars
 block content
     .catalog.container
         h1.h1.page-title Women
-        .row
-            .col-md-2
+        .catalog__filter-btn
+            span.fltr-btn
+                +icon('i-filters')
+        .catalog__grid
+            .catalog__nav
                 +b('nav').catalog-nav
                     +e('ul').__list
+                        li
+                            a(href="#").active All
                         li
                             a(href="#") Dress
                         li
@@ -28,26 +33,113 @@ block content
                             a(href="#") Accessories
                         li
                             a(href="#") Limited
-            .col-md-10
-                +b.catalog-filters
-                    +e.__item
-                        select.js-formstyler
-                            option Size
-                            option Size 2
-                            option Size 3
-                    +e.__item
-                        select.js-formstyler
-                            option Color
-                            option Color 2
-                            option Color 3
-                    +e.__item
-                        select.js-formstyler
-                            option Material
-                            option Material 2
-                            option Material 3
-                include components/product-item
+            .catalog__filters
+                +b('form').catalog-filters
+                    +e.__list
+                        +e.__item
+                            +e.__item-title.js-custom-toggle Size
+                                span.arr
+                            +e.__item-body
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="size" checked)
+                                        span.label XS
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="size")
+                                        span.label S
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="size")
+                                        span.label M
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="size")
+                                        span.label L
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="size")
+                                        span.label XL
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="size")
+                                        span.label XXL
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="size")
+                                        span.label One size
+                        +e.__item
+                            +e.__item-title.js-custom-toggle Color
+                                span.arr
+                            +e.__item-body
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color" checked)
+                                        span.label Black
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color")
+                                        span.label White
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color")
+                                        span.label Brown
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color")
+                                        span.label Yellow
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color")
+                                        span.label Red
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color")
+                                        span.label Pink
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color")
+                                        span.label Green
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="color")
+                                        span.label Blue
+                        +e.__item
+                            +e.__item-title.js-custom-toggle Material
+                                span.arr
+                            +e.__item-body
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="material" checked)
+                                        span.label Cotton
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="material")
+                                        span.label Linen
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="material")
+                                        span.label Silk
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="material")
+                                        span.label Wool
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="material")
+                                        span.label Viscose
+                                .fieldgroup
+                                    label.checkbox-item
+                                        input(type="checkbox" name="material")
+                                        span.label Acrylic
+                    +e.__actions
+                        button.btn.btn--bordered Применить
+                        a(href="#").btn Сбросить
+
+            include components/product-item
+            .catalog__list
                 .row
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog',
                             img: './assets/imgs/product9.jpg',
@@ -65,7 +157,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog product-item--sale',
                             img: './assets/imgs/product10.jpg',
@@ -88,7 +180,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog',
                             img: './assets/imgs/product11.jpg',
@@ -112,7 +204,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog',
                             img: './assets/imgs/product12.jpg',
@@ -130,7 +222,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog',
                             img: './assets/imgs/product13.jpg',
@@ -149,7 +241,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog',
                             img: './assets/imgs/product14.jpg',
@@ -168,7 +260,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog',
                             img: './assets/imgs/product15.jpg',
@@ -186,7 +278,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog product-item--sale',
                             img: './assets/imgs/product16.jpg',
@@ -205,7 +297,7 @@ block content
                             ],
                             bottom_sizes: true,
                         })
-                    .col-md-4
+                    .col-6.col-md-4
                         +product-item({
                             mod_class: 'product-item--catalog',
                             img: './assets/imgs/product17.jpg',
