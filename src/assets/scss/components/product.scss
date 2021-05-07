@@ -130,6 +130,21 @@
     font-size: 18px;
     line-height: 23px;
     padding: 20px 0;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      right: 13px;
+      width: 6px;
+      height: 6px;
+      border-top: 1px solid #2E2C34;
+      border-right: 1px solid #2E2C34;
+      transform: rotate(135deg) scale(1,1);
+    }
+    &.active::before {
+      transition: rotate(135deg) scale(-1,-1);
+    }
   }
   &__toggle-body {
     display: none;
@@ -137,6 +152,18 @@
     padding: 0 0 20px;
     p:not(:last-child) {
       margin: 0 0 10px;
+    }
+  }
+}
+
+@media (max-width: $lg - 1) {
+  .product__main {
+    padding-left: 0;
+  }
+  .product__to-fav {
+    margin-left: 0;
+    .to-favourite {
+      display: none;
     }
   }
 }

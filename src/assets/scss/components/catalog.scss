@@ -183,3 +183,17 @@
     }
   }
 }
+@media (max-width: $xs - 1) {
+  .catalog__list {
+    margin-left: -10px;
+    margin-right: -10px;
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+      & > div {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

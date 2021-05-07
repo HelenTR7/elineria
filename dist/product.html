@@ -126,9 +126,14 @@
         </nav>
         <div class="product container">
           <div class="product__row row">
-            <div class="col-md-7">
+            <div class="col-lg-7">
               <div class="product-connected-sl">
                 <div class="product-connected-sl__wrap">
+                  <div class="product-connected-sl__actions"><a class="to-favourite" href="javascript:;">
+                      <svg class="icon">
+                        <use xlink:href="./assets/imgs/sprite.svg#i-like"></use>
+                      </svg></a>
+                  </div>
                   <div class="product-connected-sl__main swiper js-swiper-main">
                     <div class="swiper-container">
                       <div class="swiper-wrapper">
@@ -162,7 +167,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-lg-5">
               <div class="product__main">
                 <div class="product__status">New
                 </div>
@@ -185,7 +190,7 @@
                 <div class="product__actions">
                   <div class="product__counter">
                     <div class="counter">
-                      <input class="counter__input js-counter-input" type="number" value="1" data-min-value="1" data-suffix="" data-max-value="5" name="NAME5093065579" aria-label="Счетчик"/>
+                      <input class="counter__input js-counter-input" type="number" value="1" data-min-value="1" data-suffix="" data-max-value="5" name="NAME3983436196" aria-label="Счетчик"/>
                       <button class="counter__btn counter__minus js-counter-minus" type="button">-</button>
                       <button class="counter__btn counter__plus js-counter-plus" type="button">+</button>
                       <div class="disabled-text">Макс. кол-во</div>
@@ -204,7 +209,7 @@
                 </div>
                 <div class="product__toggles">
                   <div class="product__toggle active">
-                    <div class="product__toggle-title">More about the product
+                    <div class="product__toggle-title js-custom-toggle">More about the product
                     </div>
                     <div class="product__toggle-body">
                       <p>Vendor code: 000015</p>
@@ -212,7 +217,7 @@
                     </div>
                   </div>
                   <div class="product__toggle">
-                    <div class="product__toggle-title">Material
+                    <div class="product__toggle-title js-custom-toggle">Material
                     </div>
                     <div class="product__toggle-body">
                       <p>Vendor code: 000015</p>
@@ -220,7 +225,7 @@
                     </div>
                   </div>
                   <div class="product__toggle">
-                    <div class="product__toggle-title">Size chart
+                    <div class="product__toggle-title js-custom-toggle">Size chart
                     </div>
                     <div class="product__toggle-body">
                       <p>Vendor code: 000015</p>
@@ -228,7 +233,7 @@
                     </div>
                   </div>
                   <div class="product__toggle">
-                    <div class="product__toggle-title">Delivery
+                    <div class="product__toggle-title js-custom-toggle">Delivery
                     </div>
                     <div class="product__toggle-body">
                       <p>Vendor code: 000015</p>
@@ -466,7 +471,11 @@
               </svg>
               <input type="email" placeholder="Enter your e-mail address here">
             </div>
-            <button class="btn btn--dark">Subscribe</button>
+            <button class="btn btn--dark"><span>Subscribe</span>
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-arr-r"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>

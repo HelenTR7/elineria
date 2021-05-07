@@ -204,10 +204,10 @@ var Application = {
             width: 400
           },
           768: {
-            width: 472
+            width: 575
           },
           1024: {
-            width: 295
+            width: 485
           },
           1310: {
             width: 575
