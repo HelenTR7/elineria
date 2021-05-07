@@ -83,3 +83,39 @@
     }
   }
 }
+
+@media (max-width: $lg) {
+  .about__main-row .about__main {
+    padding-left: 0;
+  }
+}
+@media (max-width: $sm) {
+  .about {
+    &__img-wrap {
+      display: block;
+      margin: 20px 0;
+    }
+    &__title {
+      margin: 0 0 20px;
+    }
+    &__main {
+      margin-bottom: 20px;
+    }
+    &__main p:not(:last-child) {
+      margin: 0 0 10px;
+    }
+    &__main-row {
+      margin-bottom: 10px;
+    }
+    &__main-row--first {
+      flex-direction: column-reverse;
+    }
+    blockquote {
+      margin: 60px 0 20px;
+      padding: 50px 10px 20px;
+      &::before {
+        width: 150px;
+      }
+    }
+  }
+}
